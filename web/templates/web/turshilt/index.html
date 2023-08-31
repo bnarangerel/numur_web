@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Нөмөр ББСБ</title>
+<meta charset="UTF-8">
+<meta name="description" content="Таны санхүүгийн нөмөр">
+<meta name="keywords" content="Хурдан, Хялбар, Уян хатан">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Нөмөр ББСБ">
+<meta property="og:title" content="Нөмөр">
+<meta property="og:url" content="https://numur.mn">
+<meta property="og:description" content="Хурдан Хялбар Уян хатан зээлийн үйлчилгээ">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link rel="stylesheet" href="./assets/libs/bootstrap-icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./assets/libs/tiny-slider/dist/tiny-slider.css">
+<link rel="stylesheet" href="./assets/libs/nouislider/dist/nouislider.min.css">
+<link rel="stylesheet" href="./assets/fonts/flat-font-icons/css/flaticon.css">
+<link rel="stylesheet" href="./assets/fonts/fontello-icons/fontello.css">
+<link rel="stylesheet" href="./assets/libs/magnific-popup/dist/magnific-popup.css">
+<link rel="stylesheet" href="./assets/libs/jquery-ui/dist/themes/base/jquery-ui.min.css">
+<link rel="stylesheet" href="./assets/libs/magnific-popup/dist/magnific-popup.css">
+<link rel="stylesheet" href="./assets/css/theme.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" >
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <title>Нөмөр ББСБ</title>
+</head>
+
+<body>
+  Navbar
+  <nav class="navbar navbar-expand-lg py-3 navbar-default">
+  <div class="container px-0">
+    <a class="navbar-brand" href="./index.html"><img
+        src="./assets/images/brand/logo/logo-green-color256.png" alt="numur logo" /></a>
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-default"
+      aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="icon-bar top-bar mt-0"></span>
+      <span class="icon-bar middle-bar"></span>
+      <span class="icon-bar bottom-bar"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-default">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <a class="dropdown-item" href="./index.html">
+            Нүүр
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="dropdown-item dropdown-toggle" href="#" id="navbarProducts" data-bs-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Зээлийн төрөл
+          </a>
+      <ul class="dropdown-menu dropdown-menu-arrow" aria-labelledby="navbarProducts">
+        <li class="dropdown-submenu dropstart-lg">
+          <a class="dropdown-item dropdown-list-group-item" href="./pages/zeeliinshugam.html">
+            Зээлийн шугам
+          </a>
+        </li>
+        <li class="dropdown-submenu dropstart-lg">
+          <a class="dropdown-item dropdown-list-group-item" href="./pages/purchase.html">
+            Лизингийн шугам
+          </a>
+        </li>
+        <li class="dropdown-submenu dropstart-lg">
+          <a class="dropdown-item dropdown-list-group-item" href="./pages/automashin.html">
+            Автомашины зээл
+          </a>
+        </li>
+        <li class="dropdown-submenu dropstart-lg">
+          <a class="dropdown-item dropdown-list-group-item" href="./pages/student.html">
+            Оюутны зээл
+          </a>
+        </li>
+        <li class="dropdown-submenu dropstart-lg">
+          <a class="dropdown-item dropdown-list-group-item" href="./pages/women.html">
+            Эмэгтэйчүүдийн зээл
+          </a>
+        </li>
+      </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="dropdown-item" href="./pages/help.html">
+          Тусламж
+        </a>
+      </li>
+      <li class="nav-item dropdown dropdown-menu-arrow">
+        <a class="dropdown-item" href="./pages/about.html">
+          Бидний тухай
+        </a>
+      </li>
+      </ul>
+      <div class="ms-lg-3 mt-3 d-grid mt-lg-0">
+        <a href="https://app.numur.mn/auth/login/" class="btn btn-primary btn-sm">Нэвтрэх</a>
+      </div>
+    </div>
+  </div>
+</nav>
+  <main>
+    <section>
+      <div class="position-relative">
+        <ul class="controls " id="sliderFirstControls">
+          <li class="prev">
+            <i class="fas fa-angle-left"></i>
+          </li>
+          <li class="next">
+            <i class="fas fa-angle-right"></i>
+          </li>
+        </ul>
+        <div class="sliderFirst">
+          <div class="item">
+            <div class="py-20" style="background: linear-gradient(rgba(20, 30, 40, 0.5), rgba(20, 30, 40, 0.5)),
+        rgba(20, 30, 40, 0.5) url(assets/images/slider/for-slideshow1.jpg) no-repeat center;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div>
+                      <h1 class="display-3 text-warning fw-bold mb-3">ТАНЫ САНХҮҮГИЙН НӨМӨР</h1>
+                      <p class="text-white d-none d-xl-block d-lg-block d-sm-block">Хурдан Хялбар Уян хатан
+                        <br>
+                        <strong>(+976)-7511-1133</strong>
+                      </p>
+                      <a href="https://app.numur.mn/auth/login/" class="btn btn-primary">Нэвтрэх</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="py-20" style="background:linear-gradient(rgba(20, 30, 40, 0.7), rgba(20, 30, 40, 0.7)),
+        rgba(20, 30, 40, 0.5) url(assets/images/slider/avtocar.png) no-repeat center;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div>
+                      <h1 class="display-3 text-white fw-bold mb-3 ">Автомашины зээл <br><strong
+                          class="text-warning">2.7-2.9%</strong> </h1>
+                      <p class="text-white d-none d-xl-block d-lg-block d-sm-block"> Хамтран ажиллагч авто диллерүүд
+                        дээр очин
+                        машинаа сонгоод өдөртөө өөрийн болгоорой.
+                      </p>
+                      <a href="https://app.numur.mn/auth/login/" class="btn btn-primary">Нэвтрэх</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="py-20" style="background:linear-gradient(rgba(20, 30, 40, 0.7), rgba(20, 30, 40, 0.7)),
+                  rgba(20, 30, 40, 0.5) url(assets/images/slider/slider-1.jpg) no-repeat center;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div>
+                      <h1 class="display-3 text-white fw-bold mb-3 ">Ногоон зээл<br><strong
+                          class="text-warning">2.7-2.9%</strong> </h1>
+                      <p class="text-white d-none d-xl-block d-lg-block d-sm-block"> Хамтран ажиллагч авто диллерүүд
+                        дээр очин
+                        машинаа сонгоод өдөртөө өөрийн болгоорой.
+                      </p>
+                      <a href="https://app.numur.mn/auth/login/" class="btn btn-primary">Нэвтрэх</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="py-20" style="background:linear-gradient(rgba(20, 30, 40, 0.7), rgba(20, 30, 40, 0.7)),
+                            rgba(20, 30, 40, 0.5) url(assets/images/slider/slider-2.jpg) no-repeat center;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div>
+                      <h1 class="display-3 text-white fw-bold mb-3 ">Ээжээ та чадна<br><strong
+                          class="text-warning">2.7-2.9%</strong> </h1>
+                      <p class="text-white d-none d-xl-block d-lg-block d-sm-block"> Хамтран ажиллагч авто диллерүүд
+                        дээр очин
+                        машинаа сонгоод өдөртөө өөрийн болгоорой.
+                      </p>
+                      <a href="https://app.numur.mn/auth/login/" class="btn btn-primary">Нэвтрэх</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html"><img
+            src="./assets/images/brand/logo/logo-green-color256.png" alt="numur logo" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">
+                Нүүр
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="dropdown-item " href="#" id="navbarProducts" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Зээлийн төрөл
+              </a>
+          <ul class="dropdown-menu dropdown-menu-arrow" aria-labelledby="navbarProducts">
+            <li class="dropdown-submenu dropstart-lg">
+              <a class="dropdown-item dropdown-list-group-item" href="./pages/zeeliinshugam.html">
+                Зээлийн шугам
+              </a>
+            </li>
+            <li class="dropdown-submenu dropstart-lg">
+              <a class="dropdown-item dropdown-list-group-item" href="./pages/purchase.html">
+                Лизингийн шугам
+              </a>
+            </li>
+            <li class="dropdown-submenu dropstart-lg">
+              <a class="dropdown-item dropdown-list-group-item" href="./pages/automashin.html">
+                Автомашины зээл
+              </a>
+            </li>
+            <li class="dropdown-submenu dropstart-lg">
+              <a class="dropdown-item dropdown-list-group-item" href="./pages/student.html">
+                Оюутны зээл
+              </a>
+            </li>
+            <li class="dropdown-submenu dropstart-lg">
+              <a class="dropdown-item dropdown-list-group-item" href="./pages/women.html">
+                Эмэгтэйчүүдийн зээл
+              </a>
+            </li>
+          </ul>
+          </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="./pages/help.html">
+                Тусламж
+              </a>
+            </li>
+    <li class="nav-item">
+              <a class="nav-link" href="#">Бидний тухай</a>
+            </li>
+    <li class="nav-item">
+              <a class="nav-link" href="#">Portfolio</a>
+            </li>
+    <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+    <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+    </ul>
+    </div>
+    </div>
+    </nav>
+<!--     
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="assets/images/slider/leasing_line.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="assets/images/slider/tarialanch2.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="assets/images/slider/tarialanch1.jpg" alt="Third slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div> -->
+    <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100 slider-img" src="assets/images/slider/leasing_line.jpg" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Banner Text one</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="assets/images/slider/tarialanch2.jpg" alt="Second slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Banner Text two</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="assets/images/slider/tarialanch1.jpg" alt="Third slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Banner Text three</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div> -->
+
+  <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-mdb-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/images/slider/leasing_line.jpg" class="d-block w-100" alt="Wild Landscape"/>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/slider/tarialanch2.jpg" class="d-block w-100" alt="Camera"/>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/slider/tarialanch1.jpg" class="d-block w-100" alt="Exotic Fruits"/>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleSlidesOnly" data-mdb-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleSlidesOnly" data-mdb-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+    <section class="py-lg-16 py-10">
+      <div class="container">
+        <div class="row">
+          <div class="offset-xl-2 col-xl-8 col-md-12 col-12">
+            <div class="mb-10 text-center ">
+              <h1 class="mb-1">Шинэ мэдээ</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="card mb-4 mb-lg-0">
+              <div>
+                <a href="blog-single.html"><img src="./assets/images/specials/coffeeshop1.png"
+                    alt="Borrow - Loan Company Website Template" class="img-fluid rounded-top-md"></a>
+              </div>
+              <div class="card-body p-5">
+                <h3 class="mb-2"><a href="blog-single.html" class="text-inherit">Кофе шоп</a></h3>
+                <p class="fs-6 text-uppercase fw-bold"><span class="border-end pe-2 me-2 border-2">Augest 25,
+                    2022</span><span>By<a href="#!">
+                      Admin</a></span></p>
+                <p>Нөмөр кофе шоп-д очиж гэрээ байгуулахаас гадна амттай кофе уугаарай.
+                </p>
+                <a href="blog-single.html" class="btn-link border-bottom border-primary border-2 fw-bold fs-5">Read
+                  More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="card mb-4 mb-lg-0">
+              <div>
+                <a href="blog-single.html" class="imghover"><img src="./assets/images/specials/office1.png"
+                    alt="Borrow - Loan Company Website Template" class="img-fluid"></a>
+              </div>
+              <div class="card-body p-5">
+                <h3><a href="blog-single.html" class="text-inherit">Unread Хамгийн таатай оффис</a></h3>
+                <p class="fs-6 text-uppercase fw-bold"><span class="border-end pe-2 me-2 border-2">Aug 24,
+                    2022</span><span>By<a href="#!">
+                      Admin</a></span></p>
+                <p>Нөмөр Unread-ийн хамгийн таатай оффисоор онцлууллаа.</p>
+                <a href="blog-single.html" class="btn-link border-bottom border-primary border-2 fw-bold fs-5">Read
+                  More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="card mb-4 mb-lg-0">
+              <div>
+                <a href="blog-single.html" class="imghover"><img src="./assets/images/specials/student1.jpg"
+                    alt="Borrow - Loan Company Website Templates" class="img-fluid"></a>
+              </div>
+              <div class="card-body p-5">
+                <h3><a href="blog-single.html" class="text-inherit">Сургалтын зээл</a>
+                </h3>
+                <p class="fs-6 text-uppercase fw-bold"><span class="border-end pe-2 me-2 border-2">Aug 23,
+                    2022</span><span>By<a href="#!">
+                      Admin</a></span></p>
+                <p>Оюутан залуусдаа зориулсан сургалтын төлбөрийн зээл олгож байна.
+                </p>
+                <a href="blog-single.html" class="btn-link border-bottom border-primary border-2 fw-bold fs-5">Read
+                  More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="py-lg-16 py-10 ">
+      <div class="container">
+        <div class="row">
+          <div class="offset-xl-2 col-xl-8 col-md-12 col-12">
+            <div class="mb-8 text-center">
+              <h1 class="mb-3">Зээлийн төрөл</h1>
+              <p class="lead px-md-8">Та хүссэн төрлөөр үйлчилгээгээ аваарай.</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="position-relative">
+          <ul class="controls controls-bottom" id="sliderSecondControls">
+            <li class="prev">
+              <i class="fas fa-angle-left"></i>
+            </li>
+            <li class="next">
+              <i class="fas fa-angle-right"></i>
+            </li>
+          </ul>
+          <div class="sliderSecond">
+            <div class="item">
+              <div class="card smooth-shadow-sm border-0 m-2">
+                <div class="card-body p-5">
+                  <div class="mb-5"> <img src="assets/images/numur/numurplc.svg" alt="Зээлийн шугам" class="icon-xxxl">
+                  </div>
+                  <h3><a href="#!" class="text-inherit">Зээлийн шугам</a></h3>
+                  <p>Таны санхүүгийн нөмөр
+                  </p>
+                  <a href="#!" class="btn-link border-bottom border-primary border-2 fw-bold fs-5">Үзэх</a>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card smooth-shadow-sm border-0 m-2">
+                <div class="card-body p-5">
+                  <div class="mb-5"> <img src="assets/images/numur/numurpurchase.svg" alt="leasingline"
+                      class="icon-xxxl"></div>
+                  <h3><a href="#!" class="text-inherit">Лизингийн шугам</a></h3>
+                  <p>Таны санхүүгийн нөмөр
+                  </p>
+                  <a href="#!" class="btn-link border-bottom border-primary border-2 fw-bold fs-5">Үзэх</a>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card smooth-shadow-sm border-0 m-2">
+                <div class="card-body p-5">
+                  <div class="mb-5"> <img src="assets/images/numur/numurautoloan.svg" alt="auto_car" class="icon-xxxl">
+                  </div>
+                  <h3><a href="#!" class="text-inherit">Авто машин</a></h3>
+                  <p>Таны санхүүгийн нөмөр</p>
+                  <a href="#!" class="btn-link border-bottom border-primary border-2 fw-bold fs-5">Үзэх</a>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card smooth-shadow-sm border-0 m-2">
+                <div class="card-body p-5">
+                  <div class="mb-5"> <img src="assets/images/numur/numurstudent.svg" alt="student"
+                      class="icon-xxxl align-center"></div>
+                  <h3><a href="#!" class="text-inherit">Оюутны зээл</a></h3>
+                  <p>Таны санхүүгийн нөмөр</p>
+                  <a href="#!" class="btn-link border-bottom border-primary border-2 fw-bold fs-5">Үзэх</a>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card smooth-shadow-sm border-0 m-2">
+                <div class="card-body p-5">
+                  <div class="mb-5"> <img src="assets/images/numur/numursustainable.svg"
+                      alt="Borrow - Loan Company Website Template" class="icon-xxxl"></div>
+                  <h3><a href="#!" class="text-inherit">Ногоон зээл</a></h3>
+                  <p>Таны санхүүгийн нөмөр</p>
+                  <a href="#!" class="btn-link border-bottom border-primary border-2 fw-bold fs-5">Үзэх</a>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card smooth-shadow-sm border-0 m-2">
+                <div class="card-body p-5">
+                  <div class="mb-5"> <img src="assets/images/numur/numurwomen.svg" alt="women" class="icon-xxxl"></div>
+                  <h3><a href="#!" class="text-inherit">Эмэгтэйчүүдийн зээл</a></h3>
+                  <p>Таны санхүүгийн нөмөр</p>
+                  <a href="#!" class="btn-link border-bottom border-primary border-2 fw-bold fs-5">Үзэх</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="py-lg-16 py-10 bg-white border-bottom border-top">
+      <div class="container">
+        <div class="row">
+          <div class="offset-xl-2 col-xl-8 col-md-12 col-12">
+            <div class="mb-10 text-center ">
+              <h1>Гэрээ байгуулах үе шат</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="card text-center mb-6 mt-4">
+              <div
+                class="icon-shape icon-lg bg-white border border-primary border-2 rounded-circle mx-auto mt-n4 text-success">
+                <span class="fs-3 fw-bold">1</span>
+              </div>
+              <div class="card-body p-6">
+                <h3 class="mb-2">Бүртгүүлэх</h3>
+                <p class="mb-0">Numur аппликэйшн суулгаж өөрийн мэдээллийг оруулж бүртгэл үүсгэнэ.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="card text-center mb-6 mt-4">
+              <div
+                class="icon-shape icon-lg bg-white border border-primary border-2 rounded-circle mx-auto mt-n4 text-success">
+                <span class="fs-3 fw-bold">2</span>
+              </div>
+              <div class="card-body p-6">
+                <h3 class=" mb-2">Гэрээ байгуулах</h3>
+                <p class="mb-0">Орон нутагт болон салбар, нотариат, киоск, цахимаар дамжуулан гэрээ байгуулна</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="card text-center mb-6 mt-4">
+              <div
+                class="icon-shape icon-lg bg-white border border-primary border-2 rounded-circle mx-auto mt-n4 text-success">
+                <span class="fs-3 fw-bold">3</span>
+              </div>
+              <div class="card-body p-6">
+                <h3 class=" mb-2">Зээл авах</h3>
+                <p class="mb-0">Гэрээ амжилттай байгуулснаар зээл авах боломжтой болно.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-lg-16 py-10">
+      <div class="container">
+        <div class="row">
+          <div class="offset-xl-2 col-xl-8 col-md-12 col-12">
+            <div class="mb-10 text-center">
+              <h1 class="mb-2">Аппликэйшн онцлог</h1>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 text-center text-lg-end">
+              <div class="nav flex-column tabs-has">
+                <a class="nav-link" data-bs-toggle="pill">
+                  <img src="./assets/images/specials/q-11.png" alt="huvizeel" style="width:32px">
+                  <hr>
+                  <span class="d-block h4 text-dark fw-bold">Хэзээ ч Хаанаас ч</span>
+                  <span class="d-block text-dark small lh-lg">Та цаганд баригдахгүй байршил
+                    хамаарахгүйгээр мөнгөө дансандаа шууд авах боломжтой</span>
+                </a>
+                <a class="nav-link " data-bs-toggle="pill">
+                  <img src="./assets/images/specials/q-12.png" alt="huvizeel" style="width:32px">
+                  <hr>
+                  <span class="d-block mb-1 h4 fw-bold text-dark">Барьцаа шаардахгүй</span>
+                  <span class="d-block text-dark small lh-lg">Та зээл авахад барьцаа хөрөнгө
+                    шаардахгүй <br> <br> <br></span>
+                </a>
+                <a class="nav-link " data-bs-toggle="pill">
+                  <img src="./assets/images/specials/q2.png" alt="huvizeel" style="width:32px">
+                  <hr>
+                  <span class="d-block h4 text-dark fw-bold">Өөртөө тохируулж сонго</span>
+                  <span class="d-block text-dark small lh-lg">Та зээл болгондоо нөхцөлөө өөрөө сонгон
+                    тааруулах боломжтой</span>
+                </a>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 d-none d-sm-block">
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" role="tabpanel">
+                  <div class="overlay-center">
+                    <img src="./assets/images/specials/asset-2.png" alt="img" class="rounded-6" style="width: 100%">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 text-center text-lg-start">
+              <div class="nav flex-column tabs-has" id="pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link " data-bs-toggle="pill">
+                  <img src="./assets/images/specials/q-9.png" alt="huvizeel" style="width: 32px;">
+                  <hr>
+                  <span class="d-block h4 text-dark fw-bold">Хүү</span>
+                  <span class="d-block text-dark small lh-lg">Ашигласан хоногоор <br> хүү
+                    тооцно <br> <br> </span>
+                </a>
+                <a class="nav-link" data-bs-toggle="pill">
+                  <img src="./assets/images/specials/q5.png" alt="huvizeel" style="width: 32px;">
+                  <hr>
+                  <span class="d-block h5 text-dark fw-bold">Хүссэн үедээ, Хүссэн хэмжээгээрээ</span>
+                  <span class="d-block text-dark small lh-lg">Өөрийн зээлийн хэмжээндээ багтаан зээл
+                    шаардлагатай үедээ олон дахин ашиглах боломжтой</span>
+                </a>
+                <a class="nav-link mb-0" data-bs-toggle="pill">
+                  <img src="./assets/images/specials/q-10.png" alt="huvizeel" style="width: 32px;">
+                  <hr>
+                  <span class="d-block h4 text-dark fw-bold">Хуваарьт төлбөр</span>
+                  <span class="d-block text-dark small lh-lg">Та сар бүрийн тогтмол өдөр зээлийн эргэн
+                    төлөлтөө хийх боломжтой</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-dark py-lg-16 py-10">
+      <div class="container">
+        <div class="row">
+          <div class="offset-xl-2 col-xl-8 col-md-12 col-12">
+            <div class="mb-10 text-center">
+              <h1 class="text-white m-2">QR уншуулаад апп татаарай</h1>
+              <img src="assets/images/specials/qr.jpeg" alt="application download" class="rounded-3" style="width:25%">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="footer bg-gray pt-8 ">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-sm-12 col-12">
+                <div class="mb-4 mb-lg-0">
+                    <img src="./assets/images/brand/logo/logo-green-color256.png" alt="numur-logo" />
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+                <form class="row g-0 align-items-center" action="newsletter.php" method="post">
+                    <div class="col-md-4 col-12 mb-3 mb-md-0">
+                        <h3 class="text-black mb-0">Тогтмол мэдээлэл авахыг хүсвэл</h3>
+                    </div>
+                    <div class="col-md-8 col-12">
+                        <div class="input-group">
+                            <input type="email" class="form-control border-0
+                shadow-none" id="newsletter" placeholder="Write email address" required
+                                aria-describedby="basic-addon2">
+                            <a href="#" class="btn btn-primary" id="basic-addon2">ИЛГЭЭХ</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr class="my-6 opacity-25">
+        <div class="row mb-8">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="text-black mb-3">
+                    <p>2019 оноос хойш санхүүгийн үйлчилгээ үзүүлж байгаа</p>
+                    <div class="row mt-6">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="d-flex"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    fill="currentColor" class="bi bi-geo-alt text-black mt-1" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                </svg>
+
+                                <div class="ms-3">Улаанбаатар хот, Баянгол дүүрэг 2-р хороо, Гранд плаза 706 тоот</div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6
+                  col-12 mt-3 mt-md-0">
+                            <div class="d-flex"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    fill="currentColor" class="bi bi-telephone text-black mt-1" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                </svg>
+
+                                <div class="ms-3 fs-3">+976-7511-1133</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="mb-3">
+                    <ul class="list-unstyled text-black">
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Нүүр</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Зээлийн шугам</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Лизингийн шугам</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Автомашин зээл</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Оюутны зээл</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Эмэгтэйчүүдийн зээл</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="mb-3">
+                    <ul class="list-unstyled text-black">
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Бидний тухай</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Мэдээллийн аюулгүй байдлын бодлого</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Нээлттэй ажлын байр</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Заавар зөвлөгөө</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Үйлчилгээ</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Түгээмэл асуулт хариулт</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="mb-3">
+                    <ul class="list-unstyled text-black">
+                        <li class="d-flex"><a href="#!" class="text-inherit">
+                                <i class="fab fa-facebook-f me-2 fs-5"></i>Facebook</a></li>
+                        <li class="d-flex"><a href="#!" class="text-inherit"><i class="fab fa-google
+                        me-2 fs-5"></i>Google
+                            </a></li>
+                        <li class="d-flex"><a href="#!" class="text-inherit"><i class="fab fa-twitter
+                        me-2 fs-5"></i>Twitter</a></li>
+                        <li class="d-flex"><a href="#!" class="text-inherit"><i class="fab
+                        fa-linkedin me-2 fs-5"></i>Linked
+                                In</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                <p class="fs-6 text-black">© Copyright 2023 | Numur Credit</p>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12
+              text-md-end">
+                <p class="fs-6 text-black"><a href="#" class="text-inherit">Terms
+                        of use</a> |
+                    <a href="#" class="text-inherit">Privacy Policy</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div id="fb-root"></div>
+<div class="fb-customerchat" attribution="page_inbox" page_id="292930488009631">
+</div> <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/libs/tiny-slider/dist/min/tiny-slider.js"></script>
+<script src="./assets/libs/nouislider/dist/nouislider.min.js"></script>
+<script src="./assets/libs/wnumb/wNumb.min.js"></script>
+<script src="./assets/libs/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+<script src="./assets/libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
+<script src="./assets/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="./assets/libs/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+<script src="./assets/libs/prismjs/prism.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/tnsSlider.js"></script>
+<script src="./assets/js/nouislider.js"></script>
+<script src="./assets/js/video.js"></script>
+<script src="./assets/js/jquery-ui.js"></script>
+<script src="./assets/js/slider-calculator.js"></script>
+<script src="./assets/js/simple-slider.js"></script>
+<script src="./assets/js/calculator.js"></script>
+<script src="./assets/js/loan-elgiblity.js"></script>
+<script src="./assets/js/filter-script.js"></script>
+<script src="./assets/js/popup-gallery.js"></script>
+<script src="./assets/js/copy-button.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
+<script src="https://cdn.maptiler.com/mapbox-gl-js/v1.5.1/mapbox-gl.js"></script>
+<script src="https://cdn.maptiler.com/mapbox-gl-leaflet/latest/leaflet-mapbox-gl.js"></script>
+<script src="./assets/js/map.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="./assets/js/leafsleep.js"></script>
+<script src="./assets/js/fbchat.js"></script>
+<script src="./assets/js/baisanal.js"></script>
+<script>
+  // Initialize the carousel
+  new mdb.Carousel(document.getElementById('carouselExampleSlidesOnly'));
+</script>
+
+</body>
+
+</html>
