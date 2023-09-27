@@ -1,5 +1,7 @@
 {% extends 'web/turshilt/base.html' %} {% block content %}
+{% load static %}
 <main>
+  <!-- Banner -->
   <section class="bg-primary py-lg-14 py-10">
     <div class="container">
       <div class="row align-items-center">
@@ -17,13 +19,14 @@
         </div>
         <div class="col-lg-7 col-md-6 col-12 text-md-end mt-3 mt-md-0">
           <div>
-            <img src="../assets/images/specials/456.png" alt="purchase" class="img-fluid">
+            <img src="{% static 'images/loan_type/leasing_banner.png' %}" alt="purchase" class="img-banner">
           </div>
         </div>
       </div>
     </div>
   </section>
   <!-- /.hero-wrapper -->
+  <!-- Хэрхэн ашиглах вэ? -->
   <section class="py-lg-14 py-10 bg-light">
     <div class="container">
       <div class="row justify-content-center">
@@ -34,43 +37,43 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row text-center">
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
           <div class="mb-6">
             <div class="icon-shape icon-xxl border border-2 border-primary rounded-circle text-primary mb-4">
-              <img src="../assets/images/numur/web_yellow/барьцаа шаардахгүй.svg">
+              <img src="{% static 'images/icons/baritsaa.svg' %}">
             </div>
             <h3 class="mb-2">Алхам 1</h3>
-            <p> Бараа бүтээгдэхүүн авах дэлгүүр дээрээ очино.
+            <p> Бараа бүтээгдэхүүн авах дэлгүүр дээрээ очно.
             </p>
           </div>
         </div>
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
           <div class="mb-6">
             <div class="icon-shape icon-xxl border border-2 border-primary rounded-circle text-primary mb-4">
-              <img src="../assets/images/numur/web_yellow/гэрээ байгуулах.svg">
+              <img src="{% static 'images/icons/geree.svg' %}">
             </div>
             <h3 class="mb-2">Алхам 2</h3>
             <p>Худалдан авах бараагаа
-              сонгон кассын ажилтан дээр очино.</p>
+              сонгон кассын ажилтан дээр очно.</p>
           </div>
         </div>
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
           <div class="mb-6">
             <div class="icon-shape icon-xxl border border-2 border-primary rounded-circle text-primary mb-4">
-              <img src="../assets/images/numur/web_yellow/бүртгүүлэх.svg">
+              <img src="{% static 'images/icons/burtguuleh.svg' %}">
             </div>
             <h3 class="mb-2">Алхам 3</h3>
             <p>
               Апп дээр байгаа QR уншуулах
-              хэсэг дээр дараа QR кодоо уншуулна.
+              хэсэг дээр дарж QR кодоо уншуулна.
             </p>
           </div>
         </div>
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
           <div class="mb-6">
             <div class="icon-shape icon-xxl border border-2 border-primary rounded-circle text-primary mb-4">
-              <img src="../assets/images/numur/web_yellow/хуваарьт төлбөр.svg">
+              <img src="{% static 'images/icons/huvaarit_tulbur.svg' %}">
             </div>
             <h3 class="mb-2">Алхам 4</h3>
             <p>
@@ -81,19 +84,20 @@
       </div>
     </div>
   </section>
+  <!-- Хүснэгтэн мэдээлэл -->
   <section class="py-lg-14 py-10 bg-white">
     <div class="container">
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
           <div class="mb-6">
-            <h1 class="mb-1">Лизингийн шугам</h1>
+            <h1 class="mb-1 text-center text-success">Лизингийн шугам</h1>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-6">
           <ul class="list-group fs-5">
-            <li class="bg-light list-group-item">
+            <li class="bg-grey list-group-item">
               <div class="row">
                 <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12 col-12 text-dark mb-3 mb-lg-0 fw-bold">
                   Зээлийн хэмжээ
@@ -105,7 +109,7 @@
                 </div>
               </div>
             </li>
-            <li class="list-group-item">
+            <li class="list-group-item bg-light">
               <div class="row">
                 <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12 col-12 text-dark mb-3 mb-lg-0 fw-bold">
                   Хугацаа
@@ -116,26 +120,14 @@
                 </div>
               </div>
             </li>
-            <li class="bg-light list-group-item">
+            <li class="bg-grey list-group-item">
               <div class="row">
                 <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12 col-12 text-dark mb-3 mb-lg-0 fw-bold">
                   Хүүгийн хэмжээ
                 </div>
                 <div class="col-xl-7 col-lg-7 col-md-6 col-sm-12 col-12">
                   <p class="mb-0">
-                    <span class="text-dark">2,9% ~ 4,1%.</span>
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="row">
-                <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12 col-12 text-dark mb-3 mb-lg-0 fw-bold">
-                  Нэмэгдүүлсэн хүү
-                </div>
-                <div class="col-xl-7 col-lg-7 col-md-6 col-sm-12 col-12">
-                  <p class="mb-3">
-                    Үндсэн хүүгийн 20%-тай тэнцэх
+                    <span>2,9% ~ 4,1%.</span>
                   </p>
                 </div>
               </div>
@@ -143,12 +135,22 @@
             <li class="list-group-item bg-light">
               <div class="row">
                 <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12 col-12 text-dark mb-3 mb-lg-0 fw-bold">
-                  Шимтгэл
+                  Нэмэгдүүлсэн хүү
                 </div>
                 <div class="col-xl-7 col-lg-7 col-md-6 col-sm-12 col-12">
                   <p class="mb-0">
-                    <span class="text-dark">1% ~ 2%.</span>
+                    Үндсэн хүүгийн 20%-тай тэнцэх
                   </p>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item bg-grey">
+              <div class="row">
+                <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12 col-12 text-dark mb-3 mb-lg-0 fw-bold">
+                  Шимтгэл
+                </div>
+                <div class="col-xl-7 col-lg-7 col-md-6 col-sm-12 col-12">
+                  <p class="mb-0">1% ~ 2%</p>
                 </div>
               </div>
             </li>
@@ -157,202 +159,39 @@
       </div>
     </div>
   </section>
-
+  <!-- Хамтрагч байгууллагууд -->
   <section class="container">
-    <h3 class="mb-3 mt-3 mt-md-0">Хамтрагч байгууллагууд</h3>
-    <p class="big text-black-600 font-weight-normal lh-lg pe-lg-5">Өөрт хэрэгтэй бүх бүтээгдэхүүн
-      үйлчилгээгээ урьдчилгаа төлөхгүйгээр дэлгүүр дээрээс Numur аппликейшнаа ашиглаад шууд авах боломж
-    <p>
     <div class="row">
-      <div class="col-md-3 col-sm-3 col-6 col-lg-2 mt-0 mt-md-4">
-        <figure class="card muse-card mb-4 transition-3d-hover">
-          <a href="https://www.facebook.com/nextelectronics/">
-            <img src="../assets/images/img/next.jpg" class="img-fluid w-100 rounded-5" alt="Travel">
-          </a>
-          <figcaption class="p-2">
-            <p><a href="https://www.facebook.com/nextelectronics/" class="stretched-link">Next electronics</a>
-            </p>
-            <span class="font-weight-normal"><img src="../assets/images/svg/phone.png"
-                style="height: 16px; width:16px;">
-              7719-9999</span>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-3 col-sm-3 col-6 col-lg-2 mt-0 mt-md-4">
-        <figure class="card muse-card mb-4 transition-3d-hover">
-          <a href="https://www.facebook.com/Gobikhangaimebel.Official">
-            <img src="../assets/images/img/gobi_khangai.png" class="img-fluid w-100" alt="Travel">
-          </a>
-          <figcaption class="p-2">
-            <p><a href="https://www.facebook.com/Gobikhangaimebel.Official" class="stretched-link">Gobi Khangai
-                Mebel</a></p>
-            <span class="font-weight-normal"><img src="../assets/images/svg/phone.png"
-                style="height: 16px; width:16px;">
-              7777-9393</span>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-3 col-sm-3 col-6 col-lg-2 mt-0 mt-md-4">
-        <figure class="card muse-card mb-4 transition-3d-hover">
-          <a href="https://www.facebook.com/arinaelectronic">
-            <img src="../assets/images/img/arina.jpg" class="img-fluid w-100" alt="Travel">
-          </a>
-          <figcaption class="p-2">
-            <p><a href="https://www.facebook.com/arinaelectronic" class="stretched-link">Arina Electronics</a></p>
-            <span class="font-weight-normal"><img src="../assets/images/svg/phone.png"
-                style="height: 16px; width:16px;">
-              7272-4499</span>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-3 col-sm-3 col-6 col-lg-2 mt-0 mt-md-4">
-        <figure class="card muse-card mb-4 transition-3d-hover">
-          <a href="https://www.facebook.com/bestbuidan">
-            <img src="../assets/images/img/best_buidan.jpg" class="img-fluid w-100" alt="Travel"
-              style="height:100%">
-          </a>
-          <figcaption class="p-2">
-            <p><a href="https://www.facebook.com/bestbuidan" class="stretched-link">Best Buidan</a>
-            </p>
-            <span class="font-weight-normal"><img src="../assets/images/svg/phone.png"
-                style="height: 16px; width:16px;">
-              7777-6060</span>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-3 col-sm-3 col-6 col-lg-2 mt-0 mt-md-4">
-        <figure class="card muse-card mb-4 transition-3d-hover">
-          <a href="https://www.facebook.com/shinesongolt.mn">
-            <img src="../assets/images/img/shine_songolt.jpg" class="img-fluid w-100" alt="Travel">
-          </a>
-          <figcaption class="p-2">
-            <p><a href="https://www.facebook.com/shinesongolt.mn" class="stretched-link">Шинэ Сонголт</a>
-            </p>
-            <span class="font-weight-normal"><img src="../assets/images/svg/phone.png"
-                style="height: 16px; width:16px;">7010-1144</span>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-3 col-sm-3 col-6 col-lg-2 mt-0 mt-md-4">
-        <figure class="card muse-card mb-4 transition-3d-hover">
-          <a href="https://www.facebook.com/BSBServiceOfficial">
-            <img src="../assets/images/img/bsb.jpeg" class="img-fluid w-100" alt="Travel">
-          </a>
-          <figcaption class="p-2">
-            <p><a href="https://www.facebook.com/BSBServiceOfficial" class="stretched-link">BSB</a></p>
-            <span class="font-weight-normal"><img src="../assets/images/svg/phone.png"
-                style="height: 16px; width:16px;">7510-0272</span>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-3 col-sm-3 col-6 col-lg-2 mt-0 mt-md-4">
-        <figure class="card muse-card mb-4 transition-3d-hover">
-          <a href="https://www.facebook.com/ayanga.store">
-            <img src="../assets/images/img/ayanga.jpg" class="img-fluid w-100" alt="Travel">
-          </a>
-          <figcaption class="p-2">
-            <p><a href="https://www.facebook.com/ayanga.store" class="stretched-link">Ayanga Store</a></p>
-            <span class="font-weight-normal"><img src="../assets/images/svg/phone.png"
-                style="height: 16px; width:16px;">9400-1440</span>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-3 col-sm-3 col-6 col-lg-2 mt-0 mt-md-4">
-        <figure class="card muse-card mb-4 transition-3d-hover">
-          <a href="https://www.facebook.com/Nomin.Electronics">
-            <img src="../assets/images/img/nomin.png" class="img-fluid w-100" alt="Travel">
-          </a>
-          <figcaption class="p-2">
-            <p><a href="https://www.facebook.com/Nomin.Electronics" class="stretched-link">Nomin Electronics</a>
-            </p>
-            <span class="font-weight-normal"><img src="../assets/images/svg/phone.png"
-                style="height: 16px; width:16px;">8810-0368</span>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-3 col-sm-3 col-6 col-lg-2 mt-0 mt-md-4">
-        <figure class="card muse-card mb-4 transition-3d-hover">
-          <a href="https://www.facebook.com/airee.mn">
-            <img src="../assets/images/img/airee.jpg" class="img-fluid w-100" alt="Travel">
-          </a>
-          <figcaption class="p-2">
-            <p><a href="https://www.facebook.com/airee.mn" class="stretched-link">Airee </a></p>
-            <span class="font-weight-normal"><img src="../assets/images/svg/phone.png"
-                style="height: 16px; width:16px;">9096-0609</span>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-3 col-sm-3 col-6 col-lg-2 mt-0 mt-md-4">
-        <figure class="card muse-card mb-4 transition-3d-hover">
-          <a href="https://www.facebook.com/sdesignluxury">
-            <img src="../assets/images/img/s_design.jpg" class="img-fluid w-100" alt="Travel">
-          </a>
-          <figcaption class="p-2">
-            <p><a href="https://www.facebook.com/sdesignluxury" class="stretched-link">S Design</a></p>
-            <span class="font-weight-normal"><img src="../assets/images/svg/phone.png"
-                style="height: 16px; width:16px;">8000-1680</span>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-3 col-sm-3 col-6 col-lg-2 mt-0 mt-md-4">
-        <figure class="card muse-card mb-4 transition-3d-hover">
-          <a href="https://www.facebook.com/gangantogosmotors">
-            <img src="../assets/images/img/gangan.jpg" class="img-fluid w-100" alt="Travel"
-              style="height: 130px;">
-          </a>
-          <figcaption class="p-2">
-            <p><a href="https://www.facebook.com/gangantogosmotors" class="stretched-link">Гангантогос Моторс</a>
-            </p>
-            <span class="font-weight-normal"><img src="../assets/images/svg/phone.png"
-                style="height: 16px; width:16px;">7511-1188</span>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-3 col-sm-3 col-6 col-lg-2 mt-0 mt-md-4">
-        <figure class="card muse-card mb-4 transition-3d-hover">
-          <a href="https://www.facebook.com/AutoMartOfficialMGL">
-            <img src="../assets/images/img/automart.jpg" class="img-fluid w-100" alt="aya">
-          </a>
-          <figcaption class="p-2">
-            <p><a href="https://www.facebook.com/AutoMartOfficialMGL" class="stretched-link">Автомарт</a></p>
-            <span class="font-weight-normal"><img src="../assets/images/svg/phone.png"
-                style="height: 16px; width:16px;">7711е3133</span>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-3 col-sm-3 col-6 col-lg-2 mt-0 mt-md-4">
-        <figure class="card muse-card mb-4 transition-3d-hover">
-          <a href="https://www.facebook.com/AIRMARKETHOLIDAYMN">
-            <img src="../assets/images/img/airmarket.jpg" class="img-fluid w-100" alt="ehlel">
-          </a>
-          <figcaption class="p-2">
-            <p><a href="https://www.facebook.com/AIRMARKETHOLIDAYMN" class="stretched-link">Airmarket Holiday</a>
-            </p>
-            <span class="font-weight-normal"><img src="../assets/images/svg/phone.png"
-                style="height: 16px; width:16px;">9908-3650</span>
-          </figcaption>
-        </figure>
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="mt-6 mb-3 text-center">
+          <h1 class="mb-1">Хамтрагч байгууллагууд</h1>
+        </div>
+        <p class="big text-black-600 font-weight-normal lh-lg pe-lg-5">Өөрт хэрэгтэй бүх бүтээгдэхүүн,
+          үйлчилгээгээ урьдчилгаа төлөхгүйгээр дэлгүүр дээрээс Numur аппликейшнаа ашиглаад шууд авах боломжтой.
+        <p>
       </div>
     </div>
-  </section>
-  <section class="pt-10 pb-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-          <div class="card">
-            <div class="card-body p-5">
-              <h4 class="mb-1 h1 text-center fw-bold">Хамтран ажиллах санал</h4>
-              <p class="big lh-lg text-center"> Numur+ зээлийн үйлчилгээнд өөрсдийн байгууллагаа нэмэх
-                хүсэлтээ байгаа бол та доорх мэдээллийг бөглөөд илгээнэ үү. Таны ирүүлсэн мэдээллийн
-                дагуу
-                бид тантай холбогдох болно. </p>
+    <div class="row">
+    {%if merchants%}
+      {%for merchant in merchants%}
+      <div class="merchant card mr-4 col-md-3 col-sm-3 col-6 col-lg-2 mt-0 mt-md-4 p-0 " style="display: flex;">
+          <a href="{{merchant.fb_url}}">
+            <img src="{{merchant.merchant_logo.url}}" class="img-fluid w-100 rounded-3" height="156px" alt="{{merchant.merchant_name}}">
+          </a>
+          <div class="p-2 middle">
+            <div class="content">
+              <p><a href="{{merchant.fb_url}}" style="color: white;">{{merchant.merchant_name}}</a></p>
+              <button type="button" class="btn btn-outline-light
+              ">{{merchant.format_phone_number}}</button>
             </div>
           </div>
-        </div>
       </div>
+      {%endfor%}
+    {%endif%}
     </div>
   </section>
-  <section class="pb-10 ">
+  <!-- Хамтран ажиллах санал -->
+  <section class="pt-10 pb-5">
     <div class="container">
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -360,109 +199,106 @@
             <div class="col-md-12">
               <div class="card border-gray-200 rounded-12 shadow-dark-80 p-4 p-md-5" data-aos="fade-up"
                 data-aos-delay="100">
-                <form method="POST" onsubmit="event.preventDefault(); myfunction2();">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="mb-4 mb-md-5">
-                        <label class="form-label form-label-lg" for="organization_name">Байгууллагын
-                          Нэр</label>
-                        <input type="text" id="organization_name" name="organization_name"
-                          class="form-control form-control-xl" placeholder="Байгууллагын Нэр" required
-                          oninvalid="this.setCustomValidity('Энэ хэсгийн бөглөнө үү')"
-                          oninput="this.setCustomValidity('')">
+                <div class="my-5">
+                  <h4 class="mb-1 h1 text-center fw-bold text-success">Хамтран ажиллах санал</h4>
+                  <p class="big lh-lg text-center"> Numur зээлийн үйлчилгээнд өөрсдийн байгууллагаа нэмэх хүсэлтэй байгаа бол та доорх мэдээллийг бөглөөд илгээнэ үү. Таны ирүүлсэн мэдээллийн дагуу бид тантай холбогдох болно. </p>
+                </div>
+                <form method="POST"
+                    action="https://numur.mn/numurappbackend/rest/Backend/AdminWebService/web_set_corprate">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-4 mb-md-5">
+                                <label class="form-label form-label-lg" for="organization_name">Байгууллагын
+                                    Нэр</label>
+                                <input type="text" id="organization_name" name="organization_name"
+                                    class="form-control form-control-xl" placeholder="Байгууллагын Нэр"
+                                    required oninvalid="this.setCustomValidity('Энэ хэсгийн бөглөнө үү')"
+                                    oninput="this.setCustomValidity('')">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-4 mb-md-5">
+                                <label class="form-label form-label-lg" for="organization_type">Үйл
+                                    ажиллагааны чиглэл</label>
+                                <input type="text" id="organization_type" name="organization_type"
+                                    class="form-control form-control-xl" placeholder="Чиглэл" required
+                                    oninvalid="this.setCustomValidity('Энэ хэсгийн бөглөнө үү')"
+                                    oninput="this.setCustomValidity('')">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-4 mb-md-5">
+                                <label class="form-label form-label-lg"
+                                    for="organization_webstite">Байгууллагын вебсайт</label>
+                                <input type="text" id="organization_webstite" name="organization_webstite"
+                                    class="form-control form-control-xl" placeholder="Вебсайт" required
+                                    oninvalid="this.setCustomValidity('Энэ хэсгийн бөглөнө үү')"
+                                    oninput="this.setCustomValidity('')">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-4 mb-md-5">
+                                <label class="form-label form-label-lg"
+                                    for="organization_social">Байгууллагын сошиал хаяг</label>
+                                <input type="text" id="organization_social" name="organization_social"
+                                    class="form-control form-control-xl" placeholder="Фэйсбүүк хаяг"
+                                    required oninvalid="this.setCustomValidity('Энэ хэсгийн бөглөнө үү')"
+                                    oninput="this.setCustomValidity('')">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-4 mb-md-5">
+                                <label class="form-label form-label-lg"
+                                    for="organization_employee">Байгууллагыг төлөөлөх ажилтны нэр</label>
+                                <input type="text" id="organization_employee" name="organization_employee"
+                                    class="form-control form-control-xl" placeholder="Ажилтны нэр" required
+                                    oninvalid="this.setCustomValidity('Энэ хэсгийн бөглөнө үү')"
+                                    oninput="this.setCustomValidity('')">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-4 mb-md-5">
+                                <label class="form-label form-label-lg" for="organization_property">Албан
+                                    тушаал</label>
+                                <input type="text" id="organization_property" name="organization_property"
+                                    class="form-control form-control-xl" placeholder="Албан тушаал" required
+                                    oninvalid="this.setCustomValidity('Энэ хэсгийн бөглөнө үү')"
+                                    oninput="this.setCustomValidity('')">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-4 mb-md-5">
+                                <label class="form-label form-label-lg" for="phone">Утасны дугаар</label>
+                                <input type="number" id="phone" name="phone"
+                                    class="form-control form-control-xl" placeholder="Дугаар" required
+                                    oninvalid="this.setCustomValidity('Энэ хэсгийн бөглөнө үү')"
+                                    oninput="this.setCustomValidity('')">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-4 mb-md-5">
+                                <label class="form-label form-label-lg" for="email">И-мэйл хаяг</label>
+                                <input type="email" id="email" name="email"
+                                    class="form-control form-control-xl" placeholder="И-мэйл" required
+                                    oninvalid="this.setCustomValidity('Энэ хэсгийн бөглөнө үү')"
+                                    oninput="this.setCustomValidity('')">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="mb-4 mb-md-5">
+                                <label class="form-label form-label-lg" for="body">Тайлбар</label>
+                                <textarea id="body" name="body" class="form-control form-control-xl"
+                                    placeholder="Байгуулагын талаарх нэмэлт мэдээлэл бичиж болно." rows="4" required
+                                    oninvalid="this.setCustomValidity('Энэ хэсгийн бөглөнө үү')"
+                                    oninput="this.setCustomValidity('')"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                      <div class="col-md-12 text-md-center">
+                        <button type="submit" id="submit" class="btn btn-primary btn-sm">Илгээх</button>
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="mb-4 mb-md-5">
-                        <label class="form-label form-label-lg" for="organization_type">Үйл
-                          ажиллагааны чиглэл</label>
-                        <input type="text" id="organization_type" name="organization_type"
-                          class="form-control form-control-xl" placeholder="чиглэл" required
-                          oninvalid="this.setCustomValidity('Энэ хэсгийн бөглөнө үү')"
-                          oninput="this.setCustomValidity('')">
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="mb-4 mb-md-5">
-                        <label class="form-label form-label-lg" for="organization_webstite">Байгууллагын
-                          вебсайт</label>
-                        <input type="text" id="organization_webstite" name="organization_webstite"
-                          class="form-control form-control-xl" placeholder="вебсайт" required
-                          oninvalid="this.setCustomValidity('Энэ хэсгийн бөглөнө үү')"
-                          oninput="this.setCustomValidity('')">
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="mb-4 mb-md-5">
-                        <label class="form-label form-label-lg" for="organization_social">Байгууллагын сошиал
-                          хаяг</label>
-                        <input type="text" id="organization_social" name="organization_social"
-                          class="form-control form-control-xl" placeholder="фэйсбүүк хаяг" required
-                          oninvalid="this.setCustomValidity('Энэ хэсгийн бөглөнө үү')"
-                          oninput="this.setCustomValidity('')">
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="mb-4 mb-md-5">
-                        <label class="form-label form-label-lg" for="organization_employee">Байгууллагыг төлөөлөх
-                          ажилтны нэр</label>
-                        <input type="text" id="organization_employee" name="organization_employee"
-                          class="form-control form-control-xl" placeholder="Ажилтны нэр" required
-                          oninvalid="this.setCustomValidity('Энэ хэсгийн бөглөнө үү')"
-                          oninput="this.setCustomValidity('')">
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="mb-4 mb-md-5">
-                        <label class="form-label form-label-lg" for="organization_property">Албан
-                          тушаал</label>
-                        <input type="text" id="organization_property" name="organization_property"
-                          class="form-control form-control-xl" placeholder="Албан тушаал" required
-                          oninvalid="this.setCustomValidity('Энэ хэсгийн бөглөнө үү')"
-                          oninput="this.setCustomValidity('')">
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="mb-4 mb-md-5">
-                        <label class="form-label form-label-lg" for="phone">Утасны
-                          дугаар</label>
-                        <input type="number" id="phone" name="phone" class="form-control form-control-xl"
-                          placeholder="Дугаар" required oninvalid="this.setCustomValidity('Энэ хэсгийн бөглөнө үү')"
-                          oninput="this.setCustomValidity('')">
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="mb-4 mb-md-5">
-                        <label class="form-label form-label-lg" for="email">Мэйл
-                          хаяг</label>
-                        <input type="email" id="email" name="email" class="form-control form-control-xl"
-                          placeholder="Мэйл" required oninvalid="this.setCustomValidity('Энэ хэсгийн бөглөнө үү')"
-                          oninput="this.setCustomValidity('')">
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="mb-4 mb-md-5">
-                        <label class="form-label form-label-lg" for="body">Тайлбар</label>
-                        <textarea id="body" name="body" class="form-control form-control-xl" placeholder="Текст"
-                          rows="4" required oninvalid="this.setCustomValidity('Энэ хэсгийн бөглөнө үү')"
-                          oninput="this.setCustomValidity('')"></textarea>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row align-items-center">
-                    <div class="col-md-7">
-                      <div class="form-check mb-4 mt-md-4">
-                        <label class="form-check-label" for="flexCheckChecked">Байгуулагын
-                          талаар
-                          мэдээлэл бичиж болно</label>
-                        <div id="divRecaptcha" class="g-recaptcha"
-                          data-sitekey="6Lfgd4wiAAAAADx2B9Y4uszMgIRU4e9hKHjNMceZ"></div>
-                      </div>
-                    </div>
-                    <div class="col-md-5 text-md-end">
-                      <button type="submit" id="submit" class="btn btn-xl btn-success">Илгээх</button>
-                    </div>
-                  </div>
                 </form>
               </div>
             </div>
@@ -472,4 +308,77 @@
     </div>
   </section>
 </main>
+<script>
+  AOS.init({
+      offset: 0,
+      once: true,
+      easing: 'ease-out'
+  });
+  $(document).ready(function () {
+      $("form").submit(function (event) {
+          var formData = {
+              organization_name: $("#organization_name").val(),
+              organization_webstite: $("#organization_webstite").val(),
+              organization_employee: $("#organization_employee").val(),
+              organization_type: $("#organization_type").val(),
+              organization_social: $("#organization_social").val(),
+              organization_property: $("#organization_property").val(),
+              email: $("#emails").val(),
+              phone: $("#phone").val(),
+              body: $("#body").val(),
+          };
+
+          $.ajax({
+              type: "POST",
+              url: "https://numur.mn/numurappbackend/rest/Backend/AdminWebService/web_set_corprate",
+              data: formData,
+              dataType: "json",
+              success: function (data) {
+                  if (data['success']) {
+                      swal({
+                          title: "Амжилттай",
+                          text: "Таньд амжилт хүсье!",
+                          icon: "success",
+                          button: "Болсон",
+                      });
+                  } else {
+                      swal({
+                          title: "Амжилтгүй",
+                          text: "Алдаа гарлаа дахин оролдно уу!",
+                          icon: "warning",
+                          button: "Үргэжлүүлэх",
+                      });
+                  }
+              },
+              encode: true,
+          }).done(function (data) {
+              console.log(data);
+          });
+          event.preventDefault();
+      });
+  });
+</script>
+<!-- Messenger Chat Plugin Code -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function () {
+      FB.init({
+          xfbml: true,
+          version: 'v10.0'
+      });
+  };
+
+  (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Your Chat Plugin code -->
+<div class="fb-customerchat" attribution="page_inbox" page_id="292930488009631">
+</div>
 {%endblock%}

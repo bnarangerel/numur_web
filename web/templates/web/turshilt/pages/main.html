@@ -1,0 +1,272 @@
+{% extends '../base.html' %} {% block content %}
+{% load static %}
+<main>
+    <!--slide-->
+    <section>
+      <div class="position-relative">
+        <ul class="controls " id="sliderFirstControls">
+          <li class="prev">
+            <i class="fas fa-angle-left"></i>
+          </li>
+          <li class="next">
+            <i class="fas fa-angle-right"></i>
+          </li>
+        </ul>
+        <div class="sliderFirst">
+          <!-- Personal loan line -->
+          {%if slides%}
+          {% for slide in slides%}
+          <div class="item">
+            <div class="py-20" style="background: linear-gradient(rgba(20, 30, 40, 0.5), rgba(20, 30, 40, 0.5)),
+        rgba(20, 30, 40, 0.5) url({{slide.img_url.url}}) no-repeat center;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div>
+                      <!-- slider-captions -->
+                      <h1 class="display-3 text-white fw-bold mb-3">{{slide.loan_name}} 
+                        {%if slide.loan_interest != none %}
+                        <br><strong class="text-warning">{{slide.loan_interest}}</strong> 
+                        {%endif%}
+                      </h1>
+                      <p class="text-white d-none d-xl-block d-lg-block d-sm-block">{{slide.loan_text}}
+                        <br>
+                      </p>
+                      <a href="{{slide.url}}" class="btn btn-primary">Дэлгэрэнгүй</a>
+                    </div>
+                    <!-- /.slider-captions -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {%endfor%}
+          {%endif%}
+          </div> 
+        </div>
+      </div>
+    </section>
+    <!--stage of contract-->
+    <section class="py-lg-16 py-10 bg-white border-bottom border-top">
+      <div class="container">
+        <div class="row">
+          <div class="offset-xl-2 col-xl-8 col-md-12 col-12">
+            <div class="mb-10 text-center ">
+              <h1>Гэрээ байгуулах үе шат</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-between">
+          <div class="card news-card col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div
+                class="icon-shape icon-lg bg-white border border-primary border-2 rounded-circle mx-auto mt-n4 text-success">
+                <span class="fs-3 fw-bold">1</span>
+              </div>
+            <div class="text-center">
+              
+              <div class="card-body p-6">
+                <h3 class="mb-2">Бүртгүүлэх</h3>
+                <p class="mb-0">Numur аппликэйшн суулгаж өөрийн мэдээллийг оруулж бүртгэл үүсгэнэ.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card news-card col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div
+                class="icon-shape icon-lg bg-white border border-primary border-2 rounded-circle mx-auto mt-n4 text-success">
+                <span class="fs-3 fw-bold">2</span>
+              </div>
+            <div class="text-center">
+              
+              <div class="card-body p-6">
+                <h3 class=" mb-2">Гэрээ байгуулах</h3>
+                <p class="mb-0">Орон нутагт болон салбар, нотариат, киоск, цахимаар дамжуулан гэрээ байгуулна.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card news-card col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div
+                class="icon-shape icon-lg bg-white border border-primary border-2 rounded-circle mx-auto mt-n4 text-success">
+                <span class="fs-3 fw-bold">3</span>
+              </div>
+            <div class=" text-center ">
+              
+              <div class="card-body p-6">
+                <h3 class=" mb-2">Зээл авах</h3>
+                <p class="mb-0">Гэрээ амжилттай байгуулснаар зээл авах боломжтой болно.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--new news-->
+    <section class="py-lg-16 py-10">
+      <div class="container">
+        <div class="row">
+          <div class="offset-xl-2 col-xl-8 col-md-12 col-12">
+            <div class="mb-10 text-center ">
+              <h1 class="mb-1">Шинэ мэдээ</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-between">
+          {% for i in news%}
+          <div class="card news-card p-0 m-0 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 smooth-shadow-sm">
+            <div class="mb-4 mb-lg-0">
+              <div class="nmr-square-image">
+                <a href="{{i.url}}"><img src="{{i.img_url.url}}" alt="{{i.img_caption}}"  class="img-fluid"></a>
+              </div>
+              <div class="card-body p-5">
+                <h3 class="mb-2"><a href="{{i.url}}" class="text-inherit">{{i.title}}</a></h3>
+                <p class="fs-6 text-uppercase fw-bold"><span class="border-end pe-2 me-2 border-2">{{i.published_date.month}} САРЫН {{i.published_date.day}}, {{i.published_date.year}}</span><span>By <a href="#!">{{i.publisher}}</a></span></p>
+                <p style="text-align: justify;">
+                  {% with i.text|linebreaksbr|slice:":80" as words %}
+                      {{ words }}
+                  {% endwith %}...
+                </p>
+                <!-- <a href="{{i.url}}" class="btn-link border-bottom border-primary border-2 fw-bold fs-5">Унших</a> -->
+              </div>
+            </div>
+          </div>
+          {%endfor%}
+        </div>
+      </div>
+    </section>
+    <!--loan type-->
+    <section class="py-lg-16 py-10 bg-white">
+        <div class="container">
+          <div class="row">
+            <div class="offset-xl-2 col-xl-8 col-md-12 col-12">
+              <div class="mb-8 text-center">
+                <!-- section title start-->
+                <h1 class="mb-3">Зээлийн төрөл</h1>
+                <p class="lead px-md-8">Та хүссэн төрлөөр үйлчилгээгээ аваарай.</strong></p>
+              </div>
+              <!-- /.section title start-->
+            </div>
+          </div>
+          <div class="row justify-content-between">
+            {%if loan_types%}
+              {%for loan_type in loan_types%}
+              <div class="card news-card col-4 item my-3 smooth-shadow-sm border-0 m-2">
+                <div class="p-5">
+                  <div class=" text-center"> <img src="{{loan_type.icon.url}}" alt="{{loan_type.icon_caption}}" class="icon-xxxl">
+                  <h3><a href="{{loan_type.loan_page_url}}" class="text-inherit">{{loan_type.loan_name}}</a></h3>
+                  </div>
+                  <p style="text-align: justify;" class="mb-2">{{loan_type.loan_description}}</p>
+                  <!-- <a href="{{loan_type.loan_page_url}}" class="btn-link border-bottom border-primary border-2 fw-bold fs-5">Үзэх</a> -->
+                </div>
+              </div>
+              {%endfor%}
+            {%endif%}
+          </div>
+        </div>
+    </section>
+    <!-- feature of app -->
+    <section class="py-lg-16 py-10">
+      <div class="container">
+        <div class="row">
+          <div class="offset-xl-2 col-xl-8 col-md-12 col-12">
+            <div class="mb-10 text-center">
+              <!-- section title start-->
+              <h1 class="mb-2">Аппликэйшн онцлог</h1>
+            </div>
+            <!-- /.section title start-->
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 text-center text-lg-end">
+              <div class="nav flex-column tabs-has">
+                <a class="nav-link" data-bs-toggle="pill">
+                  <img src="{% static 'images/feature/q-11.png'%}" alt="huvizeel" style="width:32px">
+                  <hr>
+                  <span class="d-block h4 text-dark fw-bold">Хэзээ ч Хаанаас ч</span>
+                  <span class="d-block text-dark small lh-lg">Та цаганд баригдахгүй байршил
+                    хамаарахгүйгээр мөнгөө дансандаа шууд авах боломжтой</span>
+                </a>
+                <a class="nav-link " data-bs-toggle="pill">
+                  <img src="{% static 'images/feature/q-12.png'%}" alt="huvizeel" style="width:32px">
+                  <hr>
+                  <span class="d-block mb-1 h4 fw-bold text-dark">Барьцаа шаардахгүй</span>
+                  <span class="d-block text-dark small lh-lg">Та зээл авахад барьцаа хөрөнгө
+                    шаардахгүй <br> <br> <br></span>
+                </a>
+                <a class="nav-link " data-bs-toggle="pill">
+                  <img src="{% static 'images/feature/q2.png'%}" alt="huvizeel" style="width:32px">
+                  <hr>
+                  <span class="d-block h4 text-dark fw-bold">Өөртөө тохируулж сонго</span>
+                  <span class="d-block text-dark small lh-lg">Та зээл болгондоо нөхцөлөө өөрөө сонгон
+                    тааруулах боломжтой</span>
+                </a>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 d-none d-sm-block">
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" role="tabpanel">
+                  <div class="overlay-center">
+                    <img src="{% static 'images/feature/asset-2.png'%}" alt="img" class="rounded-6" style="width: 100%">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 text-center text-lg-start">
+              <div class="nav flex-column tabs-has" id="pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link " data-bs-toggle="pill">
+                  <img src="{% static 'images/feature/q-9.png'%}" alt="huvizeel" style="width: 32px;">
+                  <hr>
+                  <span class="d-block h4 text-dark fw-bold">Хүү</span>
+                  <span class="d-block text-dark small lh-lg">Ашигласан хоногоор <br> хүү
+                    тооцно <br> <br> </span>
+                </a>
+                <a class="nav-link" data-bs-toggle="pill">
+                  <img src="{% static 'images/feature/q5.png'%}" alt="huvizeel" style="width: 32px;">
+                  <hr>
+                  <span class="d-block h5 text-dark fw-bold">Хүссэн үедээ, Хүссэн хэмжээгээрээ</span>
+                  <span class="d-block text-dark small lh-lg">Өөрийн зээлийн хэмжээндээ багтаан зээл
+                    шаардлагатай үедээ олон дахин ашиглах боломжтой</span>
+                </a>
+                <a class="nav-link mb-0" data-bs-toggle="pill">
+                  <img src="{% static 'images/feature/q-10.png'%}" alt="huvizeel" style="width: 32px;">
+                  <hr>
+                  <span class="d-block h4 text-dark fw-bold">Хуваарьт төлбөр</span>
+                  <span class="d-block text-dark small lh-lg">Та сар бүрийн тогтмол өдөр зээлийн эргэн
+                    төлөлтөө хийх боломжтой</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- app download -->
+    <section class="bg-dark py-lg-16 py-10">
+      <div class="container">
+        <div class="row">
+          <div class="offset-xl-2 col-xl-8 col-md-12 col-12">
+            <div class="mb-10 text-center">
+              <!-- section title start-->
+              <h1 class="text-white m-4">QR уншуулаад апп татаарай</h1>
+              <img src="{% static 'images/qr/qr.jpeg' %}" alt="application download" class="rounded-3" style="width:25%">
+              <div class="row my-6">
+                <div class="mt-4 col-md-6 m-auto">
+                    <a href="https://apps.apple.com/us/app/numur/id1445520249" class="app appbtn">
+                        <img src="{% static 'images/icons/001-app-store.svg' %}" alt="appstore" style="width:24px"> APP
+                        STORE
+                    </a>
+                </div>
+                <div class="mt-4 col-md-6 m-auto">
+                    <a href="https://play.google.com/store/apps/details?id=eq.mn.numur" class="app appbtn">
+                        <img src="{% static 'images/icons/002-play-store.svg' %}" alt="appstore" style="width:24px">
+                        PLAYSTORE
+                    </a>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  {%endblock%}

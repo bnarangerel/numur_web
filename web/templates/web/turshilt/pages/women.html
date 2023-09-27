@@ -1,5 +1,7 @@
 {% extends 'web/turshilt/base.html' %} {% block content %}
+{% load static %}
 <main>
+    <!-- Slider -->
     <section>
         <div class="position-relative">
             <ul class="controls " id="sliderFirstControls">
@@ -14,7 +16,7 @@
                 <div class="item">
                     <div class="py-20"
                         style="background: linear-gradient(rgba(20, 30, 40, 0.5), rgba(20, 30, 40, 0.5)),
-                            rgba(20, 30, 40, 0.5) url(../assets/images/slider/for-slideshow.jpg) no-repeat center;">
+                            rgba(20, 30, 40, 0.5) url('{% static '/images/slider/women1.jpg' %}') no-repeat center;">
                         <div class="container">
                             <div class="row">
                                 <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
@@ -34,7 +36,8 @@
                 </div>
                 <div class="item">
                     <div class="py-22"
-                        style="background: url(../assets/images/slider/for-slideshow1.jpg)no-repeat; background-size: cover;">
+                        style="background: linear-gradient(rgba(20, 30, 40, 0.5), rgba(20, 30, 40, 0.5)),
+                        rgba(20, 30, 40, 0.5) url('{% static '/images/slider/women.jpg' %}')no-repeat; background-size: cover;">
                         <div class="container">
                             <div class="row">
                                 <div class="col-xl-7 col-lg-7 col-md-9 col-sm-12 col-12">
@@ -54,7 +57,8 @@
                 </div>
                 <div class="item">
                     <div class="py-22"
-                        style="background: url(../assets/images/slider/for-slideshow2.jpg)no-repeat; background-size: cover;">
+                        style="background: linear-gradient(rgba(20, 30, 40, 0.5), rgba(20, 30, 40, 0.5)),
+                        rgba(20, 30, 40, 0.5) url('{% static '/images/slider/women1.jpg' %}') no-repeat; background-size: cover;">
                         <div class="container">
                             <div class="row">
                                 <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
@@ -76,11 +80,19 @@
             </div>
         </div>
     </section>
-    <section class="py-lg-16 py-10">
+    <!-- Зээлийн төрөл -->
+    <section class="py-lg-16 py-10 bg-white">
         <div class="container">
+            <div class="row">
+              <div class="offset-xl-2 col-xl-8 col-md-12 col-12">
+                <div class="mb-10 text-center ">
+                  <h1 class="mb-1 text-success">Зээлийн төрлүүд</h1>
+                </div>
+              </div>
+            </div>
             <div class="row d-flex align-items-center">
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-4 mb-lg-0">
-                    <img src="../assets/images/specials/womenergelt.jpg" alt="loan_women"
+                    <img src="{% static 'images/loan_type/women/women_ergelt.jpg' %}" alt="loan_women"
                         class="img-fluid rounded-3 w-100 mb-2 mb-lg-0">
                 </div>
                 <div class="offset-lg-1 col-lg-5 col-md-12">
@@ -156,44 +168,52 @@
             </div>
         </div>
     </section>
+    <!-- Онцлог -->
     <section class="py-lg-16 py-10">
         <div class="container">
             <div class="row">
+              <div class="offset-xl-2 col-xl-8 col-md-12 col-12">
+                <div class="mb-10 text-center ">
+                  <h1 class="mb-1">Зээлийн шаардлага</h1>
+                </div>
+              </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <figure
-                        class="card branding-card border-gray-800 bg-transparent p-4 rounded-12 transition-3d-hover h-100 mb-0">
+                        class="card branding-card border-gray-800 bg-white p-4 rounded-12 transition-3d-hover h-100 mb-0">
                         <figcaption class="px-md-3 pt-2">
                             <small class="branding-tag mb-2 d-block">ХУРДАН</small>
                             <h6 class="lh-base text-black">БИЧИЛ БИЗНЕС ЭРХЛЭГЧ ЭМЭГТЭЙЧҮҮД </h6>
                         </figcaption>
                         <div class="p-3 text-center">
-                            <img src="../assets/images/specials/womenjdu.png" alt="img"
+                            <img src="{% static 'images/loan_type/women/womenjdu.png' %}" alt="img"
                                 style="max-width: 70%">
                         </div>
                     </figure>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <figure
-                        class="card branding-card border-gray-800 bg-transparent p-4 rounded-12 transition-3d-hover h-100 mb-0">
+                        class="card branding-card border-gray-800 bg-white p-4 rounded-12 transition-3d-hover h-100 mb-0">
                         <figcaption class="px-md-3 pt-2">
                             <small class="branding-tag mb-2 d-block">ХЯЛБАР</small>
                             <h6 class="lh-base text-black">БИЗНЕСЭЭ ЭХЛҮҮЛЭЭД 2 БА ТҮҮНЭЭС ДЭЭШ ЖИЛ БОЛСОН</h6>
                         </figcaption>
                         <div class="p-3 text-center">
-                            <img src="../assets/images/specials/womenbusiness.png" alt="img"
+                            <img src="{% static 'images/loan_type/women/womenbusiness.png' %}" alt="img"
                                 style="max-width: 70%">
                         </div>
                     </figure>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <figure
-                        class="card branding-card border-gray-800 bg-transparent p-4 rounded-12 transition-3d-hover h-100 mb-0 ">
+                        class="card branding-card border-gray-800 bg-white p-4 rounded-12 transition-3d-hover h-100 mb-0 ">
                         <figcaption class="px-md-3 pt-2">
                             <small class="branding-tag mb-2 d-block text-black">УЯН ХАТАН</small>
                             <h6 class="lh-base text-black">ЦААШИД ҮЙЛ АЖИЛЛАГААГАА ӨРГӨЖҮҮЛЭХ ХҮСЭЛТЭЙ</h6>
                         </figcaption>
                         <div class="p-3 text-center">
-                            <img src="../assets/images/specials/womenexpand.png" alt="img"
+                            <img src="{% static 'images/loan_type/women/womenexpand.png' %}" alt="img"
                                 style="max-width: 70%">
                         </div>
                     </figure>

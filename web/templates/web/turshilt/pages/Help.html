@@ -1,81 +1,91 @@
 {% extends 'web/turshilt/base.html' %} {% block content %}
+{% load static %}
 <main>
-  <section class="bg-success bg-shape py-lg-14 py-8">
+  <!-- banner -->
+  <section class="muse-section py-lg-14 py-8 bg-gray">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-12 col-md-9 col-12">
-          <div class="text-center mb-8">
-            <h1 class="text-white display-3">
-              Танд туслах харилцагчийн төв ажиллаж байна.
-            </h1>
-            <p class="text-white">
-              Даваа-Баасан 09:00-18:00 (+976)7511-1133
-            </p>
-          </div>
+        <div class="row align-items-center pb-5 g-0">
+            <div class="col-lg-6 order-lg-2 text-lg-end mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+                <img src="{% static 'assets/images/slider/callcenter.png' %}" class="img-fluid" alt="Banner" width="960" height="300">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5" style="color: #1a9988;">Танд тусламж хэрэгтэй юу?</h1>
+                <h4 class="big mt-3 text-gray-600 lh-lg">Танд асууж тодруулах зүйлс байвал харилцагчийн үйлчилгээний төв ажиллаж байна.</h4>
+                <section class="muse-section perfection-section">
+                    <div class="row g-0">
+                        <div class="col-md-4 py-md-5 text-center">
+                            <h4>Даваа-Баасан <br>09:00-18:00</h4>
+                        </div>
+                        <div class="col-md-4 py-md-5 text-center border-start">
+                          <h1>7511 1133</h1>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
-      </div>
     </div>
   </section>
-  <section>
-    <div class="container mt-lg-n14 mt-n10">
+  <!-- Зээлийн төрлүүд -->
+  <section class="mb-5">
+    <div class="container mt-lg-n14 mb-n15">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-12">
           <div class="row hero-compare-features">
             <div class="col-lg-2 col-md-4 mb-2 mb-lg-0">
-              <a href="#!" class="card text-center smooth-shadow-sm border-0 ">
+              <a href="{% url 'personal_line'%}" class="card text-center smooth-shadow-sm border-0 bg-white">
                 <div class="card-body p-4">
                   <div class="icon-shape bg-light-warning rounded-circle icon-xxl">
-                    <img src="../assets/images/numur/numurplc.svg" alt="numurplc">
+                    <img src="{% static 'assets/images/icon/numurplc.svg'%}" alt="numurplc">
                   </div>
                   <h4 class="mb-0">Зээлийн шугам</h4>
                 </div>
               </a>
             </div>
             <div class="col-lg-2 col-md-4 mb-2 mb-lg-0">
-              <a href="#!" class="card text-center smooth-shadow-sm border-0 ">
+              <a href="{% url 'leasing_line'%}" class="card text-center smooth-shadow-sm border-0 ">
                 <div class="card-body p-4 px-3">
                   <div class="icon-shape bg-light-warning rounded-circle icon-xxl">
-                    <img src="../assets/images/numur/numurpurchase.svg" alt="numurpurchase">
+                    <img src="{% static 'assets/images/icon/numurpurchase.svg' %}" alt="numurpurchase">
                   </div>
                   <h4 class="mb-0">Лизингийн шугам</h4>
                 </div>
               </a>
             </div>
             <div class="col-lg-2 col-md-4 mb-2 mb-lg-0">
-              <a href="#!" class="card text-center smooth-shadow-sm border-0 ">
+              <a href="{% url 'auto'%}" class="card text-center smooth-shadow-sm border-0 ">
                 <div class="card-body p-4 px-3">
                   <div class="icon-shape bg-light-warning rounded-circle icon-xxl">
-                    <img src="../assets/images/numur/numurautoloan.svg" alt="autocar">
+                    <img src="{% static 'assets/images/icon/numurautoloan.svg' %}" alt="autocar">
                   </div>
                   <h4 class="mb-0">Автомашины зээл</h4>
                 </div>
               </a>
             </div>
             <div class="col-lg-2 col-md-4 mb-2 mb-lg-0">
-              <a href="#!" class="card text-center smooth-shadow-sm border-0 ">
+              <a href="{% url 'student'%}" class="card text-center smooth-shadow-sm border-0 ">
                 <div class="card-body p-4 px-3">
                   <div class="icon-shape bg-light-warning rounded-circle icon-xxl">
-                    <img src="../assets/images/numur/numurstudent.svg" alt="student">
+                    <img src="{% static 'assets/images/icon/numurstudent.svg' %}" alt="student">
                   </div>
                   <h4 class="mb-0">Сургалтын төлбөрийн зээл</h4>
                 </div>
               </a>
             </div>
             <div class="col-lg-2 col-md-4 mb-2 mb-lg-0">
-              <a href="#!" class="card text-center smooth-shadow-sm border-0 ">
+              <a href="{% url 'farmer'%}" class="card text-center smooth-shadow-sm border-0 ">
                 <div class="card-body p-4 px-3">
                   <div class="icon-shape bg-light-warning rounded-circle icon-xxl">
-                    <img src="../assets/images/numur/numursustainable.svg" alt="sustainable">
+                    <img src="{% static 'assets/images/icon/numursustainable.svg' %}" alt="sustainable">
                   </div>
                   <h4 class="mb-0">Ногоон <br> зээл</h4>
                 </div>
               </a>
             </div>
             <div class="col-lg-2 col-md-4 mb-2 mb-lg-0">
-              <a href="#!" class="card text-center smooth-shadow-sm border-0 ">
+              <a href="{% url 'women'%}" class="card text-center smooth-shadow-sm border-0 ">
                 <div class="card-body p-4 px-3">
                   <div class="icon-shape bg-light-warning rounded-circle icon-xxl">
-                    <img src="../assets/images/numur/numurwomen.svg" alt="women">
+                    <img src="{% static 'assets/images/icon/numurwomen.svg' %}" alt="women">
                   </div>
                   <h4 class="mb-0">Эмэгтэйчүүдийн зээл</h4>
                 </div>
@@ -86,217 +96,178 @@
       </div>
     </div>
   </section>
-
-  <section class="py-lg-16 py-10">
-    <div class="container">
-      <div class="row d-flex align-items-center">
-        <div class="col-lg-5 col-md-5 col-12">
-          <div class="mb-5 mb-lg-0">
-            <span
-              class="icon-shape icon-lg bg-transparent border rounded-circle border-warning text-warning mb-4 fs-3">1</span>
-            <h1>Түгээмэл асуулт хариулт</h1>
-            <p class="mb-6">
-              Give us some details on the kind of loan you need and how
-              you’ll use it. We’ll send your request out to our lender
-              network, and within seconds, you’ll see competing offers.
-            </p>
-            <a href="#!" class="btn-link border-bottom border-primary border-2 fw-bold fs-5">Ready to Get Started</a>
-          </div>
-        </div>
-        <div class="offset-lg-1 col-lg-6 col-md-7 col-12">
+  <!-- Заавар Видео -->
+  <section class="py-lg-16 py-10 bg-white pb-0">
+    <div class="container p-0">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-12 p-0">
           <div class="text-center">
-            <img src="../assets/images/svg/graphics-1.svg" class="w-100"
-              alt="Borrow - Loan Company Responsive Website Templates">
+            <h1 style="color: #1a9988;" class="text-uppercase p-0">Заавар Видео</h1>
           </div>
         </div>
       </div>
+      <div class="p-0" style="display: flex; flex: wrap; align-items: center;">
+        <div class="col-md-12 text-md-end pt-md-2 mb-4 p-0">
+            <a href="https://www.youtube.com/@NumurCredit" class="btn btn-link link-dark p-0" target="_blank">Бүх видеог харах<svg class="ms-1"
+                    data-name="icons/tabler/chevron right" xmlns="http://www.w3.org/2000/svg" width="10"
+                    height="10" viewBox="0 0 16 16">
+                    <rect data-name="Icons/Tabler/Chevron Right background" width="16" height="16" fill="none"></rect>
+                    <path
+                        d="M.26.26A.889.889,0,0,1,1.418.174l.1.086L8.629,7.371a.889.889,0,0,1,.086,1.157l-.086.1L1.517,15.74A.889.889,0,0,1,.174,14.582l.086-.1L6.743,8,.26,1.517A.889.889,0,0,1,.174.36Z"
+                        transform="translate(4)" fill="#black"></path>
+                </svg></a>
+        </div>
     </div>
-  </section>
-  <section>
-    <div class="py-lg-14 py-8">
-      <div class="container">
-        <div class="row d-flex align-items-center">
-          <div class="col-lg-7 col-md-7 col-12">
-            <div class="mb-5 mb-lg-0 text-center">
-              <img src="../assets/images/svg/graphics-2.svg" class="w-100"
-                alt="Borrow - Loan Company Responsive Website Templates">
-            </div>
-          </div>
-          <div class="col-lg-5 col-md-5 col-12">
-            <div>
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-6 col-md-5 col-12 mb-6 p-0">
+          <div class="mb-5 mb-lg-0 p-0">
+            <div style="display: flex; align-items: center;" class="mb-4">
               <span
-                class="icon-shape icon-lg bg-transparent border rounded-circle border-warning text-warning mb-4 fs-3">2</span>
-              <h1>Shop and Compare</h1>
-              <p class="mb-6">
-                This works just like shopping for a flight. Lenders are
-                competing for your business, which means you get the most
-                competitive offers. No markup from us.
-              </p>
-              <a href="#!" class="btn-link border-bottom border-primary border-2 fw-bold fs-5">Start Shopping</a>
+                class="icon-shape icon-lg bg-transparent border rounded-circle border-warning text-warning fs-3">1</span>
+              <h3 class="ml-3">Бүртгүүлэх заавар</h3>
             </div>
+            <div class="col-6 col-lg-6 mt-1 p-0" data-aos="fade-up" data-aos-delay="100">
+              <figure class="card border-0 transition-3d-hover mb-0 mb-md-3">
+                  <div class="video-container">
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/slThWLuIrnM"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen></iframe>
+                  </div>
+              </figure>
+          </div>
           </div>
         </div>
+        <div class="col-lg-6 col-md-5 col-12 mb-6 p-0">
+          <div class="mb-5 mb-lg-0 p-0">
+            <div style="display: flex; align-items: center;" class="mb-4">
+              <span
+                class="icon-shape icon-lg bg-transparent border rounded-circle border-warning text-warning fs-3">2</span>
+              <h3 class="ml-3">Хэрхэн 1 удаагийн гэрээ байгуулах вэ?</h3>
+            </div>
+            <div class="col-6 col-lg-6 mt-1 p-0" data-aos="fade-up" data-aos-delay="100">
+              <figure class="card border-0 transition-3d-hover mb-0 mb-md-3">
+                  <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-eaVtp8UORI?si=prvhQG89F8aRK2jJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+              </figure>
+          </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-5 col-12  mb-6 p-0">
+          <div class="mb-5 mb-lg-0 p-0">
+            <div style="display: flex; align-items: center;" class="mb-4">
+              <span
+                class="icon-shape icon-lg bg-transparent border rounded-circle border-warning text-warning fs-3">3</span>
+              <h3 class="ml-3">Хэрхэн зээл авах вэ?</h3>
+            </div>
+            <div class="col-6 col-lg-6 mt-1 p-0" data-aos="fade-up" data-aos-delay="100">
+              <figure class="card border-0 transition-3d-hover mb-0 mb-md-3">
+                  <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Juro2lvjaXo?si=NZRSVOv3N8MLfZBl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+              </figure>
+          </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-5 col-12 mb-6 p-0">
+          <div class="mb-5 mb-lg-0 p-0">
+            <div style="display: flex; align-items: center;" class="mb-4">
+              <span
+                class="icon-shape icon-lg bg-transparent border rounded-circle border-warning text-warning fs-3">4</span>
+              <h3 class="ml-3">Хэрхэн зээлээ төлөх вэ?</h3>
+            </div>
+            <div class="col-6 col-lg-6 mt-1 p-0" data-aos="fade-up" data-aos-delay="100">
+              <figure class="card border-0 transition-3d-hover mb-0 mb-md-3">
+                  <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8zqIjJ_FfY8?si=svSRmiuRV3kSiEDC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+              </figure>
+          </div>
+          </div>
+        </div>
+        <!-- <div class="offset-lg-1 col-lg-6 col-md-7 col-12">
+        </div> -->
       </div>
     </div>
   </section>
-  <section class="py-lg-14 py-8">
+  <!-- Түгээмэл асуулт хариулт -->
+  <section class="py-lg-13 bg-grey">
+    <!-- Хамгийн түгээмэл асуултууд -->
     <div class="container">
-      <div class="row d-flex align-items-center">
-        <div class="col-lg-5 col-md-5 col-12">
-          <div class="mb-5 mb-lg-0">
-            <span
-              class="icon-shape icon-lg bg-transparent border rounded-circle border-warning text-warning mb-4 fs-3">3</span>
-            <h1>May The Best Loan Win.</h1>
-            <p class="mb-6">
-              We make loan shopping easy. You can compare offers side by
-              side, talk with loan officers to haggle, or in many cases,
-              just apply online. Choose the loan that works best for you.
-            </p>
-            <a href="#!" class="btn-link border-bottom border-primary border-2 fw-bold fs-5">Find your best loan</a>
-          </div>
-        </div>
-        <div class="offset-lg-1 col-lg-6 col-md-7 col-12">
+      <!-- Түгээмэл асуулт хариулт  -->
+      <div class="row justify-content-between">
+        <div class="col-lg-12 col-md-12 col-12 ">
           <div class="text-center">
-            <img src="../assets/images/svg/graphics-3.svg" class="w-100"
-              alt="Borrow - Loan Company Responsive Website Templates">
+            <h1 style="color: #1a9988;" class="text-uppercase p-0">Хамгийн түгээмэл асуултууд</h1>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+          <div class="card q-card item mt-4 smooth-shadow-sm border-0 m-2 text-center" style="min-height: 260px;">
+            <div class="p-5">
+              <div class="mb-5 "> <img src="{% static 'images/icons/question.png' %}" alt="Түгээмэл асуулт хариулт" class="icon-xxxl">
+              </div>
+              <p class="fw-bold">Хэрхэн гэрээ байгуулах вэ?</p>
+              <p class="answer">Орон нутагт болон хотын салбар мерчантууд, киоск болон цахимаар гэрээ байгуулах боломжтой. Салбарууд болон киоскийн байршлыг <a class="fw-semibold text-white" href="{% url 'contract'%}" target="_blank"><i>энд дарж</i></a> харна уу.</p>
+              </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+          <div class="card q-card item mt-4 smooth-shadow-sm border-0 m-2 text-center" style="min-height: 260px;">
+            <div class="p-5">
+              <div class="mb-5 "> <img src="{% static 'images/icons/problem.png' %}" alt="Түгээмэл асуулт хариулт" class="icon-xxxl">
+              </div>
+              <p class="fw-bold">Зээлийн эрх хаагдсан бол дахин нээлгэж болох уу?</p>
+              <p class="answer">Та зээлийн мэдээллийн сан дээр хэвийн бус ангилалгүй мөн манайхаас авсан зээлээ 60с дээш хоног хугацаа хэтрүүлээгүй тохиолдолд таны зээл авах эрх дахин нээгдэх боломжтой.</p>
+              </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+          <div class="card q-card item mt-4 smooth-shadow-sm border-0 m-2 text-center" style="min-height: 260px;">
+            <div class="p-5">
+              <div class="mb-5 "> <img src="{% static 'images/icons/question_mark.png' %}" alt="Түгээмэл асуулт хариулт" class="icon-xxxl" >
+              </div>
+              <p class="fw-bold">Хэрхэн зээлийн эргэн төлөлт хийх вэ?</p>
+              <p class="answer">Та Numur аппликейшн рүүгээ нэвтрэн төлбөр төлөх хэсэг дээр дарж qpay болон дансаар эргэн төлөлтөө хийх боломжтой.</p>
+              </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section>
-    <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="mt-n6 bg-white mb-10 rounded-3 shadow-sm p-5">
-            <div>
-              <div class="row">
-                <div class="col-md-12 col-sm-12 col-12">
-                  <div class="mb-3">
-                    <h2 class="mb-0">Түгээмэл асуулт хариулт</h2>
-                  </div>
+          <div class="mt-10 bg-white mb-10 rounded-3 shadow-sm p-5">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-12">
+                <div class="text-center mb-3">
+                  <h2 style="color: #1a9988;">Та аль нь вэ?</h2>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                  <div class="accordion" id="Faqaccordionsone">
-                    <div class="card mb-2">
-                      <div class="p-3" id="faqOne">
-                        <h4 class="mb-0">
-                          <a href="#!" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                            aria-controls="collapseOne">
-                            <i class="fa fa-plus-circle me-1 "></i>
-                            Зээлийн эрх хэзээ нэмэгдэж ордог вэ?
-                          </a>
-                        </h4>
-                      </div>
-                      <div id="collapseOne" class="collapse show" aria-labelledby="faqOne"
-                        data-bs-parent="#Faqaccordionsone">
-                        <div class="card-body border-top">
-                          Дараах тохиолдолд зээлийн эрх нэмэгдэнэ: Та нийт 3 ширхэг од цуглуулах хэрэгтэй бөгөөд манай
-                          программ ашигласан зээлийн
-                          хэмжээнээс хамааран автоматаар тооцоолох болно. Уг одыг хэрхэн авах вэ? :
-                          <br>🔸Хуваарьт төлөлтөө хугацаанд нь хийсэн тохиолдолд
-                          <br>🔸Зээлээ хаасан тохиолдолд / 15 ба түүнээс дээш хоног ашигласан байх/
-                          <br>🔸Нэг зээл төлөлтөөс дараагын зээл төлөлт, нэг зээл хаалтаас дараагын зээл хаалтын
-                          хооронд
-                          хамгийн багадаа 15 ба түүнээс
-                          дээш хоног байх хэрэгтэй .Та 3 од цуглуулсан тохиолдолд эрх нэмэх цэсэн дээр дарсанаар таны
-                          зээлийн эрх нэмэгдэнэ.
-                          Зээлийн хэмжээ хамгийн багадаа 50000 төгрөгөөр нэмэгдэнэ.
-                        </div>
-                      </div>
+            </div>
+            <div class="row justify-content-around my-4">
+              <div class="col-lg-3 col-md-4 mb-2 mb-lg-0 order-lg-1">
+                <a class="card text-center smooth-shadow-sm border-0 bg-white " id="personal">
+                  <div class="card-body whoisit p-4">
+                    <div class="icon-shape bg-light-warning rounded-circle icon-xxl">
+                      <img src="{% static 'images/icons/confused.png' %}" alt="question" class="icon-xxl">
                     </div>
-                    <div class="card mb-2">
-                      <div class="p-3" id="faqTwo">
-                        <h4 class="mb-0">
-                          <a href="#!" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                            aria-expanded="false" aria-controls="collapseTwo">
-                            <i class="fa fa-plus-circle me-1 "></i>
-                            Зээлийн эрх хаагдсан гэж дахин нээх боломжгүй юу?
-                          </a>
-                        </h4>
-                      </div>
-                      <div id="collapseTwo" class="collapse" aria-labelledby="faqTwo"
-                        data-bs-parent="#Faqaccordionsone">
-                        <div class="card-body border-top">
-                          Та 30-дээш зээлийн хугацаа хэтэрүүлсэн мөн ,ЗМС ангилал
-                          өөрчлөгдсөн тохиолдолд эрх нээх боломжгүй юм.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card mb-2">
-                      <div class="p-3" id="faqThree">
-                        <h4 class="mb-0">
-                          <a href="#!" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                            aria-expanded="false" aria-controls="collapseThree">
-                            <i class="fa fa-plus-circle me-1 "></i>
-                            Зээлийн хугацаа хэтэрсэн байгаа зээлээ хаагаад эргээд зээл авч болох уу?
-                          </a>
-                        </h4>
-                      </div>
-                      <div id="collapseThree" class="collapse" aria-labelledby="faqThree"
-                        data-bs-parent="#Faqaccordionsone">
-                        <div class="card-body border-top">
-                          Та хугацаа хэтрүүлсэн байгаа учраас хэтэрсэн хоногоос
-                          шалтгаалан зээл авах боломжтой үгүйг программ тооцоолдог байгаа , та Нөмөр
-                          facebook чат, <span class="bold">contact@numurcredit.mn</span> гэсэн емайл хаягаар эрх
-                          нээлгэх
-                          хүсэлт илгээн
-                          бид хүсэлт
-                          илгээнэ, бид таны эрх нээх боломжтой үгүйг шалган эргэн хариу мэдэгдэх
-                          болно.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card mb-2">
-                      <div class="p-3" id="faqFour">
-                        <h4 class="mb-0">
-                          <a href="#!" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                            aria-expanded="false" aria-controls="collapseFour">
-                            <i class="fa fa-plus-circle me-1 "></i>
-                            Зээлийн хэмжээ арай их дүнгээр үүсэх боломжгүй юу?
-                          </a>
-                        </h4>
-                      </div>
-                      <div id="collapseFour" class="collapse" aria-labelledby="faqFour"
-                        data-bs-parent="#Faqaccordionsone">
-                        <div class="card-body border-top">
-                          Боломжгүй ,таны хурууны хээг уншуулсанаар ндш төлөлт болон
-                          бусад мэдээлэл дээрээс программ автоматаар зээлийн авах хэмrээг тогтоодог
-                          байгаа.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card mb-2">
-                      <div class="p-3" id="faqFive">
-                        <h4 class="mb-0">
-                          <a href="#!" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive"
-                            aria-expanded="false" aria-controls="collapseFive">
-                            <i class="fa fa-plus-circle me-1 "></i>
-                            Зээлээ хэрхэн сунгах вэ?
-                          </a>
-                        </h4>
-                      </div>
-                      <div id="collapseFive" class="collapse" aria-labelledby="faqFive"
-                        data-bs-parent="#Faqaccordionsone">
-                        <div class="card-body border-top">
-                          Өнөөдрийнх хүртэл ашигласан хоногийн хүүгээ төлөөд ,зээл
-                          сунгах маягт бөглөн сунгалт хийх боломжтой. Дараах 3 хувилбараас сонгон
-                          сунгалт хийх боломжтой.
-                          <br>
-                          1. Эргэн төлөлтийн хугацааг арай урт болгож сарын төлөлтийг багасгах
-                          <br>
-                          2. Сар бүр хүүгээ төлж яваад шинээр зээлийн хуваарь үүсгэх
-                          <br>
-                          3. Төлөлт хийхгүйгээр шинэ зээлийн хуваарьт хуримтлагдсан хүүг шингээж төлөх
-                          <br>
-                          Энэ нь зөвхөн СЗХ-ны шийдвэрийн дагуу 2021-07-01 хүртэл сунгах хүсэлт
-                          авах боломжтой.
-                        </div>
-                      </div>
-                    </div>
+                    <h4 class="mb-0">Хувь хүн</h4>
                   </div>
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 mb-2 mb-lg-0 order-lg-2">
+                <a class="card text-center smooth-shadow-sm border-0 bg-white " id="merchant">
+                  <div class="card-body p-4 whoisit">
+                    <div class="icon-shape bg-light-warning rounded-circle icon-xxl">
+                      <img src="{% static 'images/icons/search.png'%}" alt="question" class="icon-xl">
+                    </div>
+                    <h4 class="mb-0">Байгууллага</h4>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                <div class="accordion" id="content">
                 </div>
               </div>
             </div>
@@ -304,6 +275,9 @@
         </div>
       </div>
     </div>
+
   </section>
+  <!-- Chat -->
+  <section></section>
 </main>
 {% endblock %}

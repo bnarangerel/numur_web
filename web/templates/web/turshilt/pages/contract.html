@@ -1,0 +1,496 @@
+{% extends 'web/turshilt/base.html' %} {% block content %}
+{% load static %}
+<div class="container">
+    <!-- Muse Section -->
+    <section class="muse-section">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <div class="my-3">
+                    <span class="badge bg-teal-700 text-uppercase text-white">Нөмөртэй</span>
+                    <h2 class="display-4 mt-3">Гэрээ байгуулах цэгүүд </h2>
+                    <div class="my-4 pb-2" data-aos="fade-up" data-aos-delay="100">
+                        <div id="map">
+                            <img src="{% static 'images/about/map.jpg'%}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-md-0 bg-teal-700 p-1 rounded-12">
+    <section class="muse-section">
+        <div class="row">
+            <div class="col-6 col-md-3 text-center my-2">
+                <h3 class="display-4 mb-0"><span class="counter purecounter" data-purecounter-delay="50"
+                        data-purecounter-start="0" data-purecounter-end="60">0</span></h3>
+                <p class="mb-0">Нийт</p>
+            </div>
+            <div class="col-6 col-md-3 text-center my-2">
+                <h3 class="display-4 mb-0">
+                    <div class="counter purecounter" data-purecounter-delay="50" data-purecounter-start="0"
+                        data-purecounter-end="21">0</div>
+                </h3>
+                <p class="mb-0">Орон нутаг салбар</p>
+            </div>
+            <div class="col-6 col-md-3 text-center my-2">
+                <h3 class="display-4 mb-0"><span class="counter purecounter" data-purecounter-delay="50"
+                        data-purecounter-start="0" data-purecounter-end="10">0</span></h3>
+                <p class="mb-0">Улаанбаатар салбарууд</p>
+            </div>
+            <div class="col-6 col-md-3 text-center my-2">
+                <h3 class="display-4 mb-0"><span class="counter purecounter" data-purecounter-delay="50"
+                        data-purecounter-start="0" data-purecounter-end="0">0</span></h3>
+                <p class="mb-0">Киоск салбар</p>
+            </div>
+        </div>
+    </section>
+    <hr class="my-md-0 bg-teal-700 p-1 rounded-12">
+</div>
+<div class="container contact-template pages-template">
+    <!-- Төв салбар мэдээлэл -->
+    <section class="muse-section py-4 py-md-5 mt-md-2" data-aos="fade-up" data-aos-delay="100">
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="pills-four-code-features-example1">
+                <div class="row bg-white-90 rounded-24">
+                    <div class="col-lg-2 p-4">
+                        <div class="rounded-12 overflow-hidden mb-4 mb-md-0">
+                            <img src="{% static 'images/merchant/grand.png' %}" class="w-100" alt="Map">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 p-4">
+                        <h3 class="font-weight-bold">Төв салбар</h3>
+                        <p>БГД, 2-р хороо, Гранд плаза цогцолбор, 706 тоот</p>
+                        <div class="row">
+                            <div class="col-4 ms-auto pt-4">
+                                <h6 class="font-weight-normal"><img src="{% static 'images/icons/phone.png'%}" style="height: 16px; width:16px;"> 75111133 </h6>
+                            </div>
+                            <div class="col-8 ms-auto pt-4">
+                                <h6 class="font-weight-normal"><svg version="1.1" id="Capa_1"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px"
+                                        viewBox="0 0 477.867 477.867"
+                                        style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve">
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M238.933,0C106.974,0,0,106.974,0,238.933s106.974,238.933,238.933,238.933s238.933-106.974,238.933-238.933
+                                            C477.726,107.033,370.834,0.141,238.933,0z M238.933,443.733c-113.108,0-204.8-91.692-204.8-204.8s91.692-204.8,204.8-204.8
+                                            s204.8,91.692,204.8,204.8C443.611,351.991,351.991,443.611,238.933,443.733z"
+                                                    fill="#15886A" />
+                                            </g>
+                                            <g>
+                                                <path
+                                                    d="M238.933,85.333c-9.426,0-17.067,7.641-17.067,17.067v119.467H102.4c-9.426,0-17.067,7.641-17.067,17.067
+                                            S92.974,256,102.4,256h136.533c9.426,0,17.067-7.641,17.067-17.067V102.4C256,92.974,248.359,85.333,238.933,85.333z" />
+                                            </g>
+                                    </svg> 09:00-18:00 </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 p-4">
+                        <div class="rounded-12 overflow-hidden mb-4 mb-md-0">
+                            <img src="{% static 'images/merchant/cafe_numur.jpeg'%}" class="w-100" alt="Map">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 p-4">
+                        <h3 class="font-weight-bold">Café numur</h3>
+                        <p>СБД, 4-р хороо, УИД-ийн замын зүүн урд Café numur
+                        </p>
+                        <div class="row">
+                            <div class="col-4 ms-auto pt-4">
+                                <h6 class="font-weight-normal"><img src="{% static 'images/icons/phone.png'%}"
+                                        style="height: 16px; width:16px;"> 75111133 </h6>
+                            </div>
+                            <div class="col-8 ms-auto pt-4">
+                                <h6 class="font-weight-normal"><svg version="1.1" id="Capa_1"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px"
+                                        viewBox="0 0 477.867 477.867"
+                                        style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve">
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M238.933,0C106.974,0,0,106.974,0,238.933s106.974,238.933,238.933,238.933s238.933-106.974,238.933-238.933
+                                            C477.726,107.033,370.834,0.141,238.933,0z M238.933,443.733c-113.108,0-204.8-91.692-204.8-204.8s91.692-204.8,204.8-204.8
+                                            s204.8,91.692,204.8,204.8C443.611,351.991,351.991,443.611,238.933,443.733z"
+                                                    fill="#15886A" />
+                                            </g>
+                                            <g>
+                                                <path
+                                                    d="M238.933,85.333c-9.426,0-17.067,7.641-17.067,17.067v119.467H102.4c-9.426,0-17.067,7.641-17.067,17.067
+                                            S92.974,256,102.4,256h136.533c9.426,0,17.067-7.641,17.067-17.067V102.4C256,92.974,248.359,85.333,238.933,85.333z" />
+                                            </g>
+                                    </svg> 07:00-22:00 </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Merchant list -->
+    <section class="muse-section py-4 py-md-5 mt-md-2" data-aos="fade-up" data-aos-delay="100">
+        <ul class="nav nav-pills" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="pills-one-code-features-example1-tab" data-bs-toggle="pill"
+                    href="#pills-one-code-features-example1" role="tab"
+                    aria-controls="pills-one-code-features-example1" aria-selected="true">Улаанбаатар</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-two-code-features-example1-tab" data-bs-toggle="pill"
+                    href="#pills-two-code-features-example3" role="tab"
+                    aria-controls="pills-two-code-features-example1" aria-selected="false">Орон нутаг</a>
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link" id="pills-three-code-features-example1-tab" data-bs-toggle="pill"
+                    href="#pills-two-code-features-example4" role="tab"
+                    aria-controls="pills-three-code-features-example1" aria-selected="false">Киоск</a>
+            </li> -->
+        </ul>
+        <div class="tab-content">
+            <p>{{general_type}}</p>
+            <div class="tab-pane fade show active" id="pills-one-code-features-example1" role="tabpanel"
+                aria-labelledby="pills-one-code-features-example1-tab">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bg-white rounded-12 shadow-dark-80 mb-4" data-aos="fade-up"
+                            data-aos-delay="100">
+                            <div class="border-bottom border-gray-200 px-4 px-md-5 py-4 d-flex align-items-center">
+                                <div>
+                                    <h3 class="mb-0">Улаанбаатар мерчант</h3>
+                                </div>
+                            </div>
+                            {%if contract_locs_ub%}
+                            {%for contract_loc_ub in contract_locs_ub%}
+                            <div id="locations_ub" class="px-4 px-md-5 py-4">
+                                <div>
+                                    <h6 class="font-weight-bold">{{contract_loc_ub.name}}</h6>
+                                    <div>
+                                        <small class="text-gray-600">{{contract_loc_ub.description}}</small>
+                                        <br>
+                                        <small class="text-gray-600">{{contract_loc_ub.address}}</small>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        {%if contract_loc_ub.phone_number1 != null%}
+                                        <div class="flex-start pt-4">
+                                            <h6 class="font-weight-normal mb-3">
+                                                <img src="{% static 'images/icons/phone.png'%}" style="height: 16px; width:16px;"> 
+                                                {{contract_loc_ub.phone_number1}}</h6>
+                                            {%if contract_loc_ub.phone_number2 != null%} 
+                                                <img src="{% static 'images/icons/phone.png'%}" style="height: 16px; width:16px;"> 
+                                                {{contract_loc_ub.phone_number2}}</h6>
+                                            {%endif%}
+                                        </div>
+                                        {%endif%}
+                                        <div class="flex-end  pt-4">
+                                            <h6 class="font-weight-normal">
+                                                <svg version="1.1" id="Capa_1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="20px"
+                                                height="20px" viewBox="0 0 477.867 477.867"
+                                                style="enable-background:new 0 0 477.867 477.867;"
+                                                xml:space="preserve">
+                                                    <g><path d="M238.933,0C106.974,0,0,106.974,0,238.933s106.974,238.933,238.933,238.933s238.933-106.974,238.933-238.933 C477.726,107.033,370.834,0.141,238.933,0z M238.933,443.733c-113.108,0-204.8-91.692-204.8-204.8s91.692-204.8,204.8-204.8 s204.8,91.692,204.8,204.8C443.611,351.991,351.991,443.611,238.933,443.733z" fill="#15886A" /></g>
+                                                    <g><path d="M238.933,85.333c-9.426,0-17.067,7.641-17.067,17.067v119.467H102.4c-9.426,0-17.067,7.641-17.067,17.067 S92.974,256,102.4,256h136.533c9.426,0,17.067-7.641,17.067-17.067V102.4C256,92.974,248.359,85.333,238.933,85.333z" /></g>
+                                                </svg> {{contract_loc_ub.time_table}}
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div><hr>
+                            </div>
+                            {%endfor%}
+                            {%endif%}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-two-code-features-example1" role="tabpanel"
+                aria-labelledby="pills-two-code-features-example1-tab">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bg-white rounded-12 shadow-dark-80 mb-4" data-aos="fade-up"
+                            data-aos-delay="100">
+                            <div class="border-bottom border-gray-200 px-4 px-md-5 py-4 d-flex align-items-center">
+                                <h3 class="mb-0">Орон нутаг</h3>
+                            </div>
+                            <div id="locations_country" class="px-4 px-md-5 py-4">
+                                {%if contract_locs_country%}
+                                {%for contract_loc_country in contract_locs_country%}
+                                <div id="locations_ub" class="px-4 px-md-5 py-4">
+                                    <div>
+                                        <h6 class="font-weight-bold">{{contract_loc_country.name}}</h6>
+                                        <div>
+                                            <small class="text-gray-600">{{contract_loc_country.description}}</small>
+                                            <br>
+                                            <small class="text-gray-600">{{contract_loc_country.address}}</small>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            {%if contract_loc_country.phone_number1%}
+                                            <div class="flex-start pt-4">
+                                                <h6 class="font-weight-normal mb-3">
+                                                    <img src="{% static 'images/icons/phone.png'%}" style="height: 16px; width:16px;"> 
+                                                    {{contract_loc_country.phone_number1}}</h6>
+                                                {%if contract_loc_country.phone_number2%} 
+                                                <h6 class="font-weight-normal mb-3">
+                                                    <img src="{% static 'images/icons/phone.png'%}" style="height: 16px; width:16px;"> 
+                                                    {{contract_loc_country.phone_number2}}</h6>
+                                                {%endif%}
+                                            </div>
+                                            {%endif%}
+                                            <div class="flex-end  pt-4">
+                                                <h6 class="font-weight-normal">
+                                                    <svg version="1.1" id="Capa_1"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20px"
+                                                    height="20px" viewBox="0 0 477.867 477.867"
+                                                    style="enable-background:new 0 0 477.867 477.867;"
+                                                    xml:space="preserve">
+                                                        <g><path d="M238.933,0C106.974,0,0,106.974,0,238.933s106.974,238.933,238.933,238.933s238.933-106.974,238.933-238.933 C477.726,107.033,370.834,0.141,238.933,0z M238.933,443.733c-113.108,0-204.8-91.692-204.8-204.8s91.692-204.8,204.8-204.8 s204.8,91.692,204.8,204.8C443.611,351.991,351.991,443.611,238.933,443.733z" fill="#15886A" /></g>
+                                                        <g><path d="M238.933,85.333c-9.426,0-17.067,7.641-17.067,17.067v119.467H102.4c-9.426,0-17.067,7.641-17.067,17.067 S92.974,256,102.4,256h136.533c9.426,0,17.067-7.641,17.067-17.067V102.4C256,92.974,248.359,85.333,238.933,85.333z" /></g>
+                                                    </svg> {{contract_loc_country.time_table}}
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div><hr>
+                                </div>
+                                {%endfor%}
+                                {%endif%}    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Tab Content -->
+    </section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        offset: 0,
+        once: true,
+        easing: 'ease-out'
+    });
+    var swiper = new Swiper('.swiper-clients', {
+        slidesPerView: 6,
+        spaceBetween: 20,
+        breakpoints: {
+            0: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            480: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 6,
+                spaceBetween: 20,
+            },
+        }
+    });
+    var swiper = new Swiper('.swiper-list', {
+        slidesPerView: 3,
+        spaceBetween: 28,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
+    var swiper = new Swiper('.swiper-list2', {
+        slidesPerView: 4,
+        spaceBetween: 28,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+    var swiper = new Swiper('.swiper-navication', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            xfbml: true,
+            version: 'v10.0'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Your Chat Plugin code -->
+<div class="fb-customerchat" attribution="setup_tool" page_id="1143793985696675">
+</div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
+<script src="https://cdn.maptiler.com/mapbox-gl-js/v1.5.1/mapbox-gl.js"></script>
+<script src="https://cdn.maptiler.com/mapbox-gl-leaflet/latest/leaflet-mapbox-gl.js"></script>
+<script src="https://unpkg.com/leaflet-mapbox-gl"></script>
+<!-- <script>
+// document.addEventListener('DOMContentLoaded', function () {
+//     // var map = L.map('map').setView([47.9135779, 106.891201], 13);
+
+//     // L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//     //     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+//     // }).addTo(map);
+    
+//     // 'https://api.maptiler.com/maps/basic-v2/?key=8O5tkfyRSWZQW9weOoxg#11.9/47.92591/106.92621'
+//     // var gl = L.mapboxGL({
+//     //     style: 'https://api.maptiler.com/maps/basic-v2/?key=8O5tkfyRSWZQW9weOoxg#11.9/47.92591/106.92621'
+//     //     // style:'https://api.maptiler.com/maps/6afd3992-cc29-48c7-b0cd-8cb2bc6826f9/style.json?key=ivor5C9n3yQrz3CjJORd',
+//     // }).addTo(map);
+//     // L.mapboxGL({
+//     //     style: 'https://api.maptiler.com/maps/basic-v2/?key=8O5tkfyRSWZQW9weOoxg#11.9/47.92591/106.92621'
+//     // }).addTo(map);
+//     // console.log('hiahiahihaia')
+//     // const markerIcon = L.icon({
+//     //     iconUrl: `https://api.geoapify.com/v1/icon?size=xx-large&type=awesome&color=%2315886A&icon=map-marker-alt&apiKey=279a1906fe04474cab20406de93c2d11`,
+//     //     iconSize: [31, 46], // size of the icon
+//     //     iconAnchor: [15.5, 42], // point of the icon which will correspond to marker's location
+//     //     popupAnchor: [0, -45] // point from which the popup should open relative to the iconAnchor
+//     // });
+//     function initMap() {
+//         var map = new google.maps.Map(document.getElementById('map'), {
+//             center: {lat: 47.9135779, lng: 106.891201}, // Set the initial center
+//             zoom: 13 // Set the initial zoom level
+//         });
+
+//         // You can add markers, polygons, and other features here
+//     }
+//     // function initMap() {
+//     //     var locations = [
+//     //         // ['UBH Center', 47.9174393, 106.9218193, '94111192'],
+//     //         // ['Ундрам Од Нотариат', 47.9223606, 106.8697753, '99033617'],
+//     //         // ['11-р хороолол СБД-ийн ЗДТГын хажууд', 47.926705, 106.930293, '99083828'],
+//     //         ['Гранд Плаза', 47.914458, 106.890600, '75111133'],
+//     //         // ['25-р Эмийн Сан (Нотариат)', 47.914366, 106.879735, '99192045'],
+//     //         // ['Төв номын сан (нотариат)', 47.914061, 106.915090, '99033617'],
+//     //         // ['Цэцээ гүн (Нотариат)', 47.922294, 106.915674, '99082652'],
+//     //         // ['19-ийн үйлчилгээний төв 10р байр', 47.901784, 106.900909, '91913705'],
+//     //         // ['32-н буудал Төрийн банктай байр', 47.911599, 106.832922, '99008529'],
+//     //         // ['City Tower', 47.919267, 106.920730, '89113425'],
+//     //         // ['БГД 2-р хороо', 47.914275, 106.886171, '99135992'],
+//     //         // ['Эрдэнэт', 49.0564917, 104.0160386, '9900-8675'],
+//     //         // ['10-р хороолол EFES дэлгүүрийн хажууд', 47.914324, 106.8729699, '90092611'],
+//     //         // ['Бөхийн өргөө Golden pen бичиг хэрэг дэлгүүрийн зүүн талд', 47.9183005, 106.936134, '99833873'],
+//     //         // ['Сүхбаатар дүүрэг, 8-р хороо, СТӨргөө Г корпус 1 давхар 12 тоот', 47.9195764, 106.9171132, '99105900'],
+//     //         // ['Дархан', 49.4707087, 105.9615297, '99770744'],
+//     //         // ['Өмнөговь Ханбогд сум Иргэдийн хөгжлийн төв 1 давхар', 43.1967623, 107.1994426, '88100927'],
+//     //         // ['Өмнөговь Даланзадгад сум Royal center 202тоот', 43.5789658, 104.4196217, '99436604'],
+//     //         // ['Увс Улаангом, 3р баг, Халиун -Бургаа-н дэлгүүр', 49.9903557, 92.0620124, '99455959'],
+//     //         // ['Сүхбаатар Баруун урт, 7-р баг Одкон хотхон "Цахим Баавгай" ХХК', 46.6756472, 113.2795101, '91012822'],
+//     //         // ['Хөвсгөл Мөрөн, 5-р баг, Цагаан-Уул зах', 49.6343025, 100.1570713, '99999538'],
+//     //         // ['Завхан', 47.7337814, 96.8433988, '99106621'],
+//     //         // ['Булган', 48.2969521, 103.4335435, '95839407'],
+//     //         // ['Өвөрхангай', 46.2602463, 102.7818653, '88232003'],
+//     //     ];
+//     //     // for (var i in locations) {
+//     //     //     const zooMarker = L.marker([locations[i][1], locations[i][2]]
+//     //     //     , {
+//     //     //         icon: markerIcon
+//     //     //     }
+//     //     //     )
+//     //     //     .bindPopup('<h4 class="trigger"> ' + locations[i][0] + '<br/>  <small> Утас: ' + locations[i][3] + '</small></h4>')
+//     //     //     .addTo(map);
+//     //     // }
+//     //     for (var i in locations) {
+//     //         console.log('hiihihio')
+//     //         const popupContent = '<h4 class="trigger"> ' + locations[i][0] + '<br/>  <small> Утас: ' + locations[i][3] + '</small></h4>';
+//     //         console.log("Popup Content:", popupContent); // Log the popup content
+//     //         const zooMarker = L.marker([locations[i][1], locations[i][2]], {
+//     //             icon: markerIcon
+//     //         })
+//     //         .bindPopup(popupContent)
+//     //         .addTo(map);
+//     //     }
+//     // }
+//     initMap();
+// });
+fetch("{% static 'js/geree.json'%}")
+    .then(response => response.json())
+    .then(data => {
+        {
+            for (var key in data) {
+                var html = data[key].map(function (item) {
+                    phone_number_html = (item.phone_number != "") ? item.phone_number.map(function (number) {
+                        return `<h6 class="font-weight-normal mb-3"><img src="{% static 'images/icons/phone.png'%}" style="height: 16px; width:16px;"> ${number}</h6>`
+                    }).join('') : "";
+                    time_table_html = (item.time_table != "") ? `<h6 class="font-weight-normal"><svg version="1.1" id="Capa_1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20px"
+                            height="20px" viewBox="0 0 477.867 477.867"
+                            style="enable-background:new 0 0 477.867 477.867;"
+                            xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path
+                                        d="M238.933,0C106.974,0,0,106.974,0,238.933s106.974,238.933,238.933,238.933s238.933-106.974,238.933-238.933 C477.726,107.033,370.834,0.141,238.933,0z M238.933,443.733c-113.108,0-204.8-91.692-204.8-204.8s91.692-204.8,204.8-204.8 s204.8,91.692,204.8,204.8C443.611,351.991,351.991,443.611,238.933,443.733z"
+                                        fill="#15886A" />
+                                </g>
+                                <g>
+                                    <path
+                                        d="M238.933,85.333c-9.426,0-17.067,7.641-17.067,17.067v119.467H102.4c-9.426,0-17.067,7.641-17.067,17.067 S92.974,256,102.4,256h136.533c9.426,0,17.067-7.641,17.067-17.067V102.4C256,92.974,248.359,85.333,238.933,85.333z" />
+                                </g>
+                                                    </svg> ${item.time_table} </h6>` : "";
+                    return `
+        <div>
+            <h6 class="font-weight-bold"> ${item.name}</h6>
+            <div>
+                <small class="text-gray-600">${item.description}</small>
+                <br>
+                <small class="text-gray-600">${item.branch}</small>
+            </div>
+            <div class="d-flex justify-content-between">
+                <div class="flex-start pt-4">
+                    ${phone_number_html} 
+                </div>
+                <div class="flex-end  pt-4">
+                        ${time_table_html}
+                </div>
+            </div>
+        </div><hr>
+                `;
+                }).join('');
+
+                console.log(key)
+                document.getElementById("locations_" + key).innerHTML = html;
+            }
+
+        }
+    })
+</script> -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap" async defer></script>
+<script src="{% static 'js/purecounter.js' %}"></script>
+{% endblock %}
+            <!-- {% for general_type in general_types %}
+            <li class="nav-item">
+                <a class="nav-link" id="pills-{{general_type.id}}-code-features-tab" data-bs-toggle="pill"
+                    href="#pills-{{general_type.id}}-code-features" role="tab"
+                    aria-controls="pills-{{general_type.id}}-code-features" aria-selected="true">{{general_type.pk}}</a>
+            </li>
+            {% endfor %} -->

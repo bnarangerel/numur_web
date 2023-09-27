@@ -1,17 +1,18 @@
 {% extends 'web/turshilt/base.html' %} {% block content %}
+{%load static%}
 <main>
-  <section class="pt-20 pb-20" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(0, 0, 0, 0.2) url(../assets/images/specials/about.png) no-repeat center;
+  <section class="pt-20 pb-10 bg-white" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(0, 0, 0, 0.2) url('{% static 'images/slider/about.png' %}') no-repeat center;
 background-size: cover;">
   </section>
-  <section class="py-lg-16 py-10">
+  <section class="py-lg-10">
     <div class="container">
       <div class="row d-flex align-items-center">
         <div class="text-center">
-          <img src="../assets/images/svg/shield.svg" alt="iso-27001" class="mb-4">
-          <h1 class="mb-3">НӨМӨР КРЕДИТ-ИЙН <br> МЭДЭЭЛЛИЙН АЮУЛГҮЙ БАЙДЛЫН БОДЛОГО</h1>
+          <img src="{% static 'images/icons/shield.svg' %}" alt="iso-27001" class="mb-3">
+          <h1 class="mb-5">НӨМӨР КРЕДИТ-ИЙН <br> МЭДЭЭЛЛИЙН АЮУЛГҮЙ БАЙДЛЫН БОДЛОГО</h1>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-4 mb-lg-0">
-          <img src="../assets/images/specials/iso27001.png" alt="iso-27001"
+          <img src="{% static 'images/about/iso27001.png' %}" alt="iso-27001"
             class="img-fluid rounded-3 w-100 mb-2 mb-lg-0">
         </div>
         <div class="offset-lg-1 col-lg-5 col-md-12">
@@ -65,7 +66,7 @@ background-size: cover;">
       </div>
     </div>
   </section>
-  <section>
+  <!-- <section>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -138,10 +139,10 @@ background-size: cover;">
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <div class="py-lg-20 py-10"
     style="background: linear-gradient(rgba(20, 30, 40, 0.5), rgba(20, 30, 40, 0.5)),
-                        rgba(20, 30, 40, 0.5) url(../assets/images/specials/123.png) no-repeat; background-size: cover; background-position: center;">
+                        rgba(20, 30, 40, 0.5) url('{% static 'images/about/123.png' %}') no-repeat; background-size: cover; background-position: center;">
     <div class="container">
       <div class="row">
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 mb-6 mb-md-0">
@@ -168,10 +169,10 @@ background-size: cover;">
       </div>
     </div>
   </div>
-  <section class="py-lg-16 py-16 container">
+  <!-- <section class="py-lg-16 py-16 container">
     <h2 class="display-4 mt-3">Гэрээ байгуулах цэгүүд </h2>
     <div id='map1' class="mapContainer img-responsive"></div>
-  </section>
+  </section> -->
   <section class="py-lg-16 py-10">
     <div class="container">
       <div class="row d-flex align-items-center">
@@ -199,7 +200,7 @@ background-size: cover;">
         </div>
         <div class="offset-lg-1 col-lg-6 col-md-7 col-12">
           <div class="text-center">
-            <img src="../assets/images/specials/ua.png" class="w-100 rounded-4" alt="numur-about">
+            <img src="{% static 'images/about/ua.png' %}" class="w-100 rounded-4" alt="numur-about">
           </div>
         </div>
       </div>

@@ -1,2 +1,87 @@
 {% extends 'web/turshilt/base.html' %} {% block content %}
+{% load static %}
+<main>
+  <!-- Banner -->
+  <section class="bg-white">
+    <div class="py-20" style="background: linear-gradient(rgba(20, 30, 40, 0.5), rgba(20, 30, 40, 0.5)),
+    rgba(20, 30, 40, 0.5) url('{% static 'images/slider/farmer2.jpg' %}') no-repeat center;">
+      <div class="container">
+        <div class="row">
+            <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
+                <div>
+                    <h1 class="display-2 text-warning fw-bold">Тариаланчдын зээл</h1>
+                    <p class=" d-none d-xl-block d-lg-block d-sm-block text-white">Өрхийн тариалан эрхлэлтийг дэмжих
+                      зээлийн үйлчилгээ</p>
+                    <a href="https://oyutan.numur.mn/auth/login/"
+                        class="btn btn-primary">Хөтөлбөрт хамрагдах</a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Зээлийн нөхцөл -->
+  <section class="py-lg-16 py-10 bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="offset-xl-2 col-xl-8  col-md-12 col-12">
+          <div class="mb-5 text-center">
+            <h1 class="text-success text-uppercase">Өрхийн тариалан эрхлэлтийг дэмжих
+              зээлийн үйлчилгээ</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex align-items-center">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-4 mb-lg-0">
+          <img src="{% static 'images/loan_type/farmer/farmer1.jpg' %}" alt="loan_women"
+              class="img-fluid rounded-3 w-100 mb-2 mb-lg-0">
+        </div>
+        <div class="offset-lg-1 col-lg-5 col-md-12">
+          <div class="d-flex mb-3">
+              <div class="fs-3 text-success"><i class="bi bi-check-circle-fill"></i></div>
+              <div class="ms-3">
+                  <h3 class="text-success">ЗЭЭЛИЙН НӨХЦӨЛ</h3>
+                  <ul class="list-unstyled  mb-0">
+                      <li class="mb-1"><i class="bi bi-check-circle me-2 text-success"></i>Барьцаа төлбөргүй
+                      </li>
+                      <li class="mb-1"><i class="bi bi-check-circle me-2 text-success"></i>5 сая төгрөг хүртэл
+                      </li>
+                      <li class="mb-1"><i class="bi bi-check-circle me-2 text-success"></i>9 сарын хугацаатай
+                      </li>
+                      <li class="mb-1"><i class="bi bi-check-circle me-2 text-success"></i>Хүү сарын 1.9%
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="d-flex mb-3">
+              <div class="fs-3 text-success"><i class="bi bi-check-circle-fill"></i></div>
+              <div class="ms-3">
+                  <h3 class="text-success">ТАВИГДАХ ШААРДЛАГА</h3>
+                  <ul class="list-unstyled  mb-0">
+                      <li class="mb-1"><i class="bi bi-check-circle me-2 text-success"></i>2 болон түүнээс дээш жилийн өөрийн нэрийн газар
+                        дээр тариалан эрхэлсэн
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="d-flex mb-3">
+              <div class="fs-3 text-success"><i class="bi bi-check-circle-fill"></i></div>
+              <div class="ms-3">
+                  <h3 class="text-success">БҮРДҮҮЛЭХ МАТЕРИАЛ</h3>
+                  <ul class="list-unstyled  mb-0">
+                      <li class="mb-1"><i class="bi bi-check-circle me-2 text-success"></i>Өмнөх 1 жилийн дансны хуулга
+                      </li>
+                      <li class="mb-1"><i class="bi bi-check-circle me-2 text-success"></i>Иргэний үнэмлэх
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="text-center mt-4">
+            <a href="https://app.numur.mn/auth/login/" class="btn btn-primary text-center">Зээлийн хүсэлт гаргах</a>
+          </div>
+      </div>
+      </div>
+    </div>
+  </section>
+</main>
 {%endblock%}

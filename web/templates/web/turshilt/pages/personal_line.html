@@ -1,51 +1,49 @@
 {% extends 'web/turshilt/base.html' %} {% block content %}
+{% load static %}
 <main>
+  <!-- banner -->
   <section class="bg-light">
+    <div class="py-20" style="background: url('{% static 'images/loan_type/personal_line1.png' %}') no-repeat center center;">
     <div class="container">
       <div class="row d-flex align-items-center">
         <div class="col-lg-5 col-md-12 col-12">
+          <!-- <img src="{% static 'images/loan_type/personal_line1.jpg' %}" alt="app" class="img-fluid"> -->
           <div class="p-3 p-lg-0 py-md-6">
-            <h1 class="display-3">Хувийн зээлийн шугам</h1>
+            <h2 class="display-3">Хувийн зээлийн шугам</h2>
             <p class="lead">
-              2 сая төгрөг хүртэлх зээлийн эрх, 12 сар хүртэлх хугацаа ХУРДАН ХЯЛБАР УЯН ХАТАН зээлийн үйлчилгээ
+              2 сая төгрөг хүртэлх зээлийн эрх, 9 сар хүртэлх хугацаа ХУРДАН ХЯЛБАР УЯН ХАТАН зээлийн үйлчилгээ
             </p>
-            <div class="mb-4">
-              <a href="https://app.numur.mn" class="btn btn-primary">Нэвтрэх</a>
-            </div>
           </div>
         </div>
-        <div class="col-lg-7 col-md-7 col-12 d-md-none d-lg-block">
-          <div class="pt-8">
-            <img src="../assets/images/specials/phones.png" alt="app" class="img-fluid">
-          </div>
-        </div>
+      </div>
       </div>
     </div>
   </section>
-  <section class="py-lg-14 py-10 bg-white">
-    <div class="container">
+  <!-- Advantages of Personal loan line -->
+  <section class="py-lg-14 py-10 bg-grey">
+    <div class="container ">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-12">
           <div class="mb-5 text-center">
-            <h1>Хувийн зээлийн шугам давуу талууд</h1>
+            <h1>Хувийн зээлийн шугамын давуу талууд</h1>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-4">
           <div class="card h-100">
-            <div class="card-body">
-              <img src="../assets/images/numur/web_yellow/хуваарьт төлбөр.svg" alt="numurcredit" class="mb-4 icon-xl">
+            <div class="card-body text-center">
+              <img src="{% static 'images/icons/huvaarit_tulbur.svg'%}" alt="numurcredit" class="mb-4 icon-xl">
               <p class="mb-0">
-                Олон сараар хувааж төлөх боломж
+                Олон сараар хувааж төлөх боломж 
               </p>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-4">
           <div class="card h-100">
-            <div class="card-body">
-              <img src="../assets/images/numur/web_yellow/бүртгүүлэх.png" alt="Borrow - Loan
+            <div class="card-body text-center">
+              <img src="{% static 'images/icons/burtguuleh.svg'%}" alt="Borrow - Loan
                 Company Responsive Website Templates" class="mb-4 icon-xl">
               <p class="mb-0">
                 Бичиг баримт барьцаагүй
@@ -53,10 +51,10 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-4">
           <div class="card h-100">
-            <div class="card-body">
-              <img src="../assets/images/numur/web_yellow/хүссэн үедээ.svg" alt="numurcredit"
+            <div class="card-body text-center">
+              <img src="{% static 'images/icons/hussen_uydee.svg'%}" alt="numurcredit"
                 class="mb-4 icon-xl">
               <p class="mb-0">
                 Хэзээ ч Хаанаас ч
@@ -64,20 +62,20 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-4">
           <div class="card h-100">
-            <div class="card-body">
-              <img src="../assets/images/numur/web_yellow/хүү.svg" alt="numur" class="mb-4 icon-xl">
+            <div class="card-body text-center">
+              <img src="{% static 'images/icons/huu.svg'%}" alt="numur" class="mb-4 icon-xl">
               <p class="mb-0">
                 Ашигласан хоногоор хүү тооцно
               </p>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-4">
           <div class="card h-100">
-            <div class="card-body">
-              <img src="../assets/images/numur/web_yellow/хэзээ ч хаанаас ч.svg" alt="numurcredit"
+            <div class="card-body text-center">
+              <img src="{% static 'images/icons/hezee_c_haanaas_c.svg'%}" alt="numurcredit"
                 class="mb-4 icon-xl">
               <p class="mb-0">
                 Зээл авахад ердөө 3 минут
@@ -85,12 +83,12 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-4">
           <div class="card h-100">
-            <div class="card-body">
-              <img src="../assets/images/numur/web_yellow/өөртөө тохируулж сонго.svg" alt="numurcredit"
+            <div class="card-body text-center">
+              <img src="{% static 'images/icons/zeel_avah.svg'%}" alt="numurcredit"
                 class="mb-4 icon-xl">
-              <p class="mb-0">
+              <p class="mb-0 ">
                 2,000,000 хүртэлх төгрөг
               </p>
             </div>
@@ -99,40 +97,111 @@
       </div>
     </div>
   </section>
-  <section class="bg-white py-6 smooth-shadow-sm">
+  <!--stage of contract-->
+  <section class="py-lg-16 py-10 bg-white border-bottom border-top">
     <div class="container">
       <div class="row">
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4 col-12">
-          <div class="d-flex mb-6 mb-md-0">
-            <img src="../assets/images/specials/muuzee.png">
-            <div class="ms-4">
-              <h3 class="mb-1">НДШ сүүлийн 12 сар тасралтгүй төлсөн</h3>
-              <p>Тасралтгүй НДШ байгууллагаар төлөгдсөн байх шаардлагатай</p>
+        <div class="offset-xl-2 col-xl-8 col-md-12 col-12">
+          <div class="mb-10 text-center ">
+            <h1>Гэрээ байгуулах үе шат</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-between">
+        <div class="card news-card col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+          <div
+              class="icon-shape icon-lg bg-white border border-primary border-2 rounded-circle mx-auto mt-n4 text-success">
+              <span class="fs-3 fw-bold">1</span>
+            </div>
+          <div class="text-center">
+            
+            <div class="card-body p-6">
+              <h3 class="mb-2">Бүртгүүлэх</h3>
+              <p class="mb-0">Numur аппликэйшн суулгаж өөрийн мэдээллийг оруулж бүртгэл үүсгэнэ.</p>
             </div>
           </div>
         </div>
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4 col-12">
-          <div class="d-flex">
-            <img src="../assets/images/specials/ndsh logo.png">
-            <div class="ms-4">
-              <h3 class="mb-1">Муу зээлийн түүхгүй байх</h3>
-              <p>Монгол банкны мэдээллийн санд муу зээлийн түүхгүй байх</p>
+        <div class="card news-card col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+          <div
+              class="icon-shape icon-lg bg-white border border-primary border-2 rounded-circle mx-auto mt-n4 text-success">
+              <span class="fs-3 fw-bold">2</span>
+            </div>
+          <div class="text-center">
+            
+            <div class="card-body p-6">
+              <h3 class=" mb-2">Гэрээ байгуулах</h3>
+              <p class="mb-0">Орон нутагт болон салбар, нотариат, киоск, цахимаар дамжуулан гэрээ байгуулна.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card news-card col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+          <div
+              class="icon-shape icon-lg bg-white border border-primary border-2 rounded-circle mx-auto mt-n4 text-success">
+              <span class="fs-3 fw-bold">3</span>
+            </div>
+          <div class=" text-center ">
+            
+            <div class="card-body p-6">
+              <h3 class=" mb-2">Зээл авах</h3>
+              <p class="mb-0">Гэрээ амжилттай байгуулснаар зээл авах боломжтой болно.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="py-12 bg-primary">
+  <!-- Зээлийн эрх үүсэх шалгуур -->
+  <section class="bg-grey py-6 smooth-shadow-sm">
     <div class="container">
-      <div class="row ">
-        <div class="offset-lg-3 col-lg-6 offset-md-2 col-md-8 col-12">
-          <div class="text-center">
-            <h1 class="text-white">ТАНЫ САНХҮҮГИЙН НӨМӨР</h1>
-            <p class="text-white mb-4">
-              Хурдан Хялбар Уян хатан зээлийн үйлчилгээ
-            </p>
-            <a href="https://app.numur.mn" class="btn btn-white">нэвтрэх</a>
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-12">
+          <div class="mb-10 text-center">
+            <h1>Зээлийн эрх үүсэх шалгуур</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4 col-12 d-flex">
+          <div><img src="{% static 'images/icons/muuzeel.png'%}"></div>
+          <div class="ms-4">
+            <h3 class="mb-1">НДШ сүүлийн 6 сар тасралтгүй төлсөн</h3>
+            <p>Нийгмийн даатгалын шимтгэл албан байгууллагаас тасралтгүй сүүлийн 6 сар төлөгдсөн байх шаардлагатай.</p>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4 col-12 d-flex">
+          <div><img src="{% static 'images/icons/ndsh_logo.png'%}"></div>
+          <div class="ms-4">
+            <h3 class="mb-1">Муу зээлийн түүхгүй байх</h3>
+            <p>Монгол банкны зээлийн мэдээллийн санд хэвийн бус зээлийн түүхгүй байх.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- app download -->
+  <section class="bg-dark py-lg-16 py-10">
+    <div class="container">
+      <div class="row">
+        <div class="offset-xl-2 col-xl-8 col-md-12 col-12">
+          <div class="mb-10 text-center">
+            <!-- section title start-->
+            <h1 class="text-white m-4">QR уншуулаад Numur аппликейшнаа татаарай.</h1>
+            <img src="{% static 'images/qr/qr.jpeg' %}" alt="application download" class="rounded-3" style="width:25%">
+            <div class="row my-6">
+              <div class="mt-4 col-md-6 m-auto">
+                  <a href="https://apps.apple.com/us/app/numur/id1445520249" class="app appbtn">
+                      <img src="{% static 'images/icons/001-app-store.svg' %}" alt="appstore"> 
+                      APP STORE
+                  </a>
+              </div>
+              <div class="mt-4 col-md-6 m-auto">
+                  <a href="https://play.google.com/store/apps/details?id=eq.mn.numur" class="app appbtn">
+                      <img src="{% static 'images/icons/002-play-store.svg' %}" alt="appstore">
+                      PLAYSTORE
+                  </a>
+              </div>
+          </div>
           </div>
         </div>
       </div>

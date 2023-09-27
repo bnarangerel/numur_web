@@ -5,184 +5,309 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Нөмөр ББСБ</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Таны санхүүгийн нөмөр">
+    <meta name="keywords" content="Хурдан, Хялбар, Уян хатан">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Нөмөр ББСБ">
+    <meta property="og:title" content="Нөмөр">
+    <meta property="og:url" content="https://numur.mn">
+    <meta property="og:description" content="Хурдан Хялбар Уян хатан зээлийн үйлчилгээ">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="{% static '/assets/libs/bootstrap-icons/font/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/libs/tiny-slider/dist/tiny-slider.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/libs/nouislider/dist/nouislider.min.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/fonts/flat-font-icons/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/fonts/fontello-icons/fontello.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/libs/magnific-popup/dist/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/libs/jquery-ui/dist/themes/base/jquery-ui.min.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/libs/magnific-popup/dist/magnific-popup.css' %}">
+    <link rel="stylesheet" href="https://cdn.maptiler.com/mapbox-gl-js/v1.5.1/mapbox-gl.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.maptiler.com/mapbox-gl-js/v1.5.1/mapbox-gl.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/theme.css' %}" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="header_nav">
-        <a class="navbar-brand" id="logo" href="{% url 'base'%}">
-            <img
-            src="{% static '/images/logo/logo-green-color.png' %}" alt="numur logo" /></a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto links">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-item" href="{% url 'base'%}">
-                Нүүр
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link" href="#" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Зээлийн төрөл
-                </a>
-                <ul class="dropdown-menu dropdown-menu-arrow" aria-labelledby="navbarProducts">
-                  <li class="dropdown-submenu dropstart-lg">
-                    <a class="dropdown-item dropdown-list-group-item" href="{% url 'personal_line'%}">
-                      Хэрэглээний зээл
-                    </a>
-                  </li>
-                  <li class="dropdown-submenu dropstart-lg">
-                    <a class="dropdown-item dropdown-list-group-item" href="{% url 'leasing_line'%}">
-                      Худалдан авалтын зээл
-                    </a>
-                  </li>
-                  <li class="dropdown-submenu dropstart-lg">
-                    <a class="dropdown-item dropdown-list-group-item" href="{% url 'auto'%}">
-                      Автомашины зээл
-                    </a>
-                  </li>
-                  <li class="dropdown-submenu dropstart-lg">
-                    <a class="dropdown-item dropdown-list-group-item" href="{% url 'student'%}">
-                      Оюутны зээл
-                    </a>
-                  </li>
-                  <li class="dropdown-submenu dropstart-lg">
-                    <a class="dropdown-item dropdown-list-group-item" href="{% url 'women'%}">
-                      Эмэгтэйчүүдийн зээл
-                    </a>
-                  </li>
-                  <li class="dropdown-submenu dropstart-lg">
-                    <a class="dropdown-item dropdown-list-group-item" href="{% url 'farmer'%}">
-                      Тариаланчдын зээл
-                    </a>
-                  </li>
-                </ul>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Мэдээ</a>
-    </li>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg py-3 nmr-navbar">
+    <div class="container px-0">
+      <a class="navbar-brand" href="{% url 'main'%}" id="logo"><img
+          src="{% static '/images/logo/logo-green-color.png' %}" alt="numur logo" /></a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-default"
+        aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="icon-bar top-bar mt-0"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <!-- Navbar -->
+      <div class="collapse navbar-collapse" id="navbar-default">
+        <ul class="navbar-nav m-auto">
+          <li class="nav-item dropdown">
+            <a class="dropdown-item" href="{% url 'main'%}">
+              Нүүр
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="dropdown-item dropdown-toggle" href="#" id="navbarProducts" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Зээлийн төрөл
+            </a>
+            <!--mobile navbar-->
+            <div style="display: hidden; opacity: 0;">
+              <ul class="dropdown-menu dropdown-menu-arrow" aria-labelledby="navbarProducts" style="display: hidden;">
+                <li class="dropdown-submenu dropstart-lg">
+                  <a class="dropdown-item dropdown-list-group-item dropdown-toggle"
+                    href="./pages/zeeliinshugam.html">
+                    Зээлийн төрөл
+                  </a>
+                <li class="dropdown-submenu dropstart-lg">
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="{% url 'personal_line'%}">
+                        Зээлийн шугам
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="{% url 'leasing_line'%}">
+                        Лизингийн шугам
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="{% url 'auto'%}">
+                        Автомашины зээл
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="{% url 'student'%}">
+                        Оюутны зээл
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item  mb-lg-0" href="{% url 'women'%}">
+                        Эмэгтэйчүүдийн зээл
+                      </a>
+                    </li>
+                </li>
 
-    <li class="nav-item">
-      <a class="nav-link" href="#">Тогтвортой хөгжил</a>
-    </li>
-    <li class="nav-item dropdown">
-        <a class="nav-link" href="{% url 'help'%}">
-        Тусламж
-        </a>
-    </li>
-    <li class="nav-item">
-              <a class="nav-link" href="{% url 'about'%}">Бидний тухай</a>
-            </li>
-    </ul>
-  </div>
-    <a href="">EN</a>
-    <div class="ms-lg-3 mt-3 d-grid mt-lg-0">
-      <a href="https://app.numur.mn/auth/login/" class="btn btn-primary btn-sm">Зээлийн хүсэлт гаргах</a>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-    </nav>
-    <main class="content container">
-        <div class="row">
-            <div class="col">
-              {% block content %} 
-              {% endblock %}
-              {% block footer%}
-              <div class="footer bg-gray pt-8 ">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-4 col-lg-4 col-sm-12 col-12">
-                            <div class="mb-4 mb-lg-0" id="logo1">
-                                <img src="{% static '/images/logo/logo-green-color.png' %}" alt="numur-logo" />
-                            </div>
-                        </div>
-                        <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
-                            <form class="row g-0 align-items-center" action="newsletter.php" method="post">
-                                <div class="col-md-4 col-12 mb-3 mb-md-0">
-                                    <h3 class="text-black mb-0">Тогтмол мэдээлэл авахыг хүсвэл</h3>
-                                </div>
-                                <div class="col-md-8 col-12">
-                                    <div class="input-group">
-                                        <input type="email" class="form-control border-0
-                            shadow-none" id="newsletter" placeholder="Write email address" required
-                                            aria-describedby="basic-addon2">
-                                        <a href="#" class="btn btn-primary" id="basic-addon2">ИЛГЭЭХ</a>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <hr class="my-6 opacity-25">
-                    <div class="row mb-8">
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                            <div class="text-black mb-3">
-                                <p>2019 оноос хойш санхүүгийн үйлчилгээ үзүүлж байгаа</p>
-                                <div class="row mt-6">
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                        <div class="d-flex"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                fill="currentColor" class="bi bi-geo-alt text-black mt-1" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
-                                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                            </svg>
-            
-                                            <div class="ms-3">Улаанбаатар хот, Баянгол дүүрэг 2-р хороо, Гранд плаза 706 тоот</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6
-                              col-12 mt-3 mt-md-0">
-                                        <div class="d-flex"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                fill="currentColor" class="bi bi-telephone text-black mt-1" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                                            </svg>
-            
-                                            <div class="ms-3 fs-3">+976-7511-1133</div>
-                                        </div>
-            
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
-                            <div class="mb-3">
-                                <ul class="list-unstyled text-black">
-                                    <li class="d-flex"><a href="#!" class="text-inherit">
-                                            <i class="fab fa-facebook-f me-2 fs-5"></i>Facebook</a></li>
-                                    <li class="d-flex"><a href="#!" class="text-inherit"><i class="fab fa-google
-                                    me-2 fs-5"></i>Google
-                                        </a></li>
-                                    <li class="d-flex"><a href="#!" class="text-inherit"><i class="fab fa-twitter
-                                    me-2 fs-5"></i>Twitter</a></li>
-                                    <li class="d-flex"><a href="#!" class="text-inherit"><i class="fab
-                                    fa-linkedin me-2 fs-5"></i>Linked
-                                            In</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                            <p class="fs-6 text-black">Бүх эрх хуулиар хамгаалагдсан. © 2023 Нөмөр Кредит ББСБ</p>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12
-                          text-md-end">
-                            <p class="fs-6 text-black"><a href="#" class="text-inherit">Terms
-                                    of use</a> |
-                                <a href="#" class="text-inherit">Privacy Policy</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+              </ul> 
             </div>
-            <div id="fb-root"></div>
-            <div class="fb-customerchat" attribution="page_inbox" page_id="292930488009631">
-            </div>
-              {% endblock %}
-            </div>
+            <!-- Web -->
+            <ul class="dropdown-menu dropdown-menu-arrow" aria-labelledby="navbarProducts">
+              <li class="dropdown-submenu dropstart-lg">
+                <a class="dropdown-item dropdown-list-group-item" href="{% url 'personal_line'%}">
+                  Зээлийн шугам
+                </a>
+              </li>
+              <li class="dropdown-submenu dropstart-lg">
+                <a class="dropdown-item dropdown-list-group-item" href="{% url 'leasing_line'%}">
+                  Лизингийн шугам
+                </a>
+              </li>
+              <li class="dropdown-submenu dropstart-lg">
+                <a class="dropdown-item dropdown-list-group-item" href="{% url 'auto'%}">
+                  Автомашины зээл
+                </a>
+              </li>
+              <li class="dropdown-submenu dropstart-lg">
+                <a class="dropdown-item dropdown-list-group-item" href="{% url 'student'%}">
+                  Оюутны зээл
+                </a>
+              </li>
+              <li class="dropdown-submenu dropstart-lg">
+                <a class="dropdown-item dropdown-list-group-item" href="{% url 'women'%}">
+                  Эмэгтэйчүүдийн зээл
+                </a>
+              </li>
+              <li class="dropdown-submenu dropstart-lg">
+                <a class="dropdown-item dropdown-list-group-item" href="{% url 'farmer'%}">
+                  Тариаланчдын зээл
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="dropdown-item" href="{% url 'help'%}">
+              Тогтвортой хөгжил
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="dropdown-item" href="{% url 'help'%}">
+              Тусламж
+            </a>
+          </li>
+          <li class="nav-item dropdown dropdown-menu-arrow">
+            <a class="dropdown-item" href="{% url 'about'%}">
+              Бидний тухай
+            </a>
+          </li>
+          </li>
+        </ul>
+      </div>
+      <div class="d-flex">
+        <div class="ms-lg-3 mt-3 d-grid mt-lg-0">
+          <a href="index.html" class="btn btn-sm">EN</a>
         </div>
-    </main>
+        <div class="ms-lg-3 mt-3 d-grid mt-lg-0">
+          <a href="{% url 'contract'%}" class="btn btn-primary btn-sm">Гэрээ байгуулах цэгүүд</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main>
+      <div class="row">
+          <div class="col">
+            {% block content %} 
+            {% endblock %}
+          </div>
+      </div>
+  </main>
+  {% block footer%}
+  <footer class="pt-4 pt-md-5 pb-2 pb-md-4 bg-white">
+      <div class="container">
+          <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3 pt-3 pt-md-4">
+              <div class="col mb-3">
+                  <h4 class="font-weight-bold">Тусламж</h4>
+                  <ul class="list-unstyled footer-link">
+                      <li>
+                          <a href="/tuslamj.html">Заавар видео</a>
+                      </li>
+                      <li>
+                          <a href="/tuslamj.html">Түгээмэл асуулт хариулт</a>
+                      </li>
+                      <li>
+                          <a href="/tuslamj.html">Мэдээллийн аюулгүй байдлын бодлого</a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="col mb-3">
+                  <h4 class="font-weight-bold">Бидний тухай</h4>
+                  <ul class="list-unstyled footer-link">
+                      <li>
+                          <a href="/about.html">Компанийн тухай</a>
+                      </li>
+                      <li>
+                          <a href="/about.html">Зорилго, Зорилт</a>
+                      </li>
+                      <li>
+                          <a href="/about.html">Үйлчилгээ</a>
+                      </li>
+                      <li>
+                          <a href="/job.html">Нээлттэй ажлын байр</a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="col mb-0 mb-md-3">
+                  <h4 class="font-weight-bold">Холбоо барих</h4>
+                  <ul class="list-unstyled footer-link">
+                      <li>
+                          <a href="send.html">info@numur.mn</a>
+                      </li>
+                      <li>
+                          <a href="/tuslamj.html">75111133</a>
+                      </li>
+                      <li>
+                          <a href="geree.html">Улаанбаатар хот, Баянгол дүүрэг
+                              2-р хороо, Гранд плаза 706 тоот</a>
+                      </li>
+                      <li>
+                          <a href="geree.html">Даваа-Баасан: <br>
+                              09:00-18:00</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <hr class="my-4">
+          <div class="row">
+              <div class="col-sm-5 order-sm-2">
+                  <div class="social-icons">
+                      <a href="https://www.facebook.com/Numur-292930488009631/"><img src="{%static  '/images/icons/002-facebook.svg' %}"
+                              style="width:20px; height:20px"></a>
+                      <a href="https://www.youtube.com/channel/UCtqFSec6V0yFhyFYy4wKPYA"><img
+                              src="{% static '/images/icons/004-youtube.svg' %}" style="width:20px; height:20px"></a>
+                      <a href="javascript:void(0);"><img src="{% static '/images/icons/003-twitter.svg' %}"
+                              style="width:20px; height:20px"></a>
+                      <a href="https://www.instagram.com/numur_official/"><img src="{% static '/images/icons/001-instagram.svg'%}"
+                              style="width:20px; height:20px"></a>
+                  </div>
+              </div>
+              <div class="col-sm-7">
+                  <p class="small text-gray-150 text-center text-sm-start">&copy; 2021 Numur. All rights reserved.
+                  </p>
+              </div>
+          </div>
+      </div>
+  </footer>
+  {% endblock %}
+
+<script src="{% static '/assets/libs/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static '/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static '/assets/libs/tiny-slider/dist/min/tiny-slider.js' %}"></script>
+<script src="{% static '/assets/libs/nouislider/dist/nouislider.min.js' %}"></script>
+<script src="{% static '/assets/libs/wnumb/wNumb.min.js' %}"></script>
+<script src="{% static '/assets/libs/magnific-popup/dist/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static '/assets/libs/isotope-layout/dist/isotope.pkgd.min.js' %}"></script>
+<script src="{% static '/assets/libs/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static '/assets/libs/magnific-popup/dist/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static '/assets/libs/prismjs/prism.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js' %}"></script>
+<script src="{% static '/assets/js/main.js' %}"></script>
+<script src="{% static '/assets/js/tnsSlider.js' %}"></script>
+<script src="{% static '/assets/js/nouislider.js' %}"></script>
+<script src="{% static '/assets/js/video.js' %}"></script>
+<script src="{% static '/assets/js/jquery-ui.js' %}"></script>
+<script src="{% static '/assets/js/slider-calculator.js' %}"></script>
+<script src="{% static '/assets/js/simple-slider.js' %}"></script>
+<script src="{% static '/assets/js/calculator.js' %}"></script>
+<script src="{% static '/assets/js/loan-elgiblity.js' %}"></script>
+<script src="{% static '/assets/js/filter-script.js' %}"></script>
+<script src="{% static '/assets/js/popup-gallery.js' %}"></script>
+<script src="{% static '/assets/js/copy-button.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
+<script src="https://cdn.maptiler.com/mapbox-gl-js/v1.5.1/mapbox-gl.js"></script>
+<script src="https://cdn.maptiler.com/mapbox-gl-leaflet/latest/leaflet-mapbox-gl.js"></script>
+<script src="{% static '/assets/js/map.js' %}"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="{% static '/assets/js/leafsleep.js' %}"></script>
+<script src="{% static '/assets/js/fbchat.js' %}"></script>
+<script src="{% static '/assets/js/baisanal.js' %}"></script>
+<script>
+  $(document).ready(function() {
+    $(".q-card").click(function() {
+      // Remove the "expanded" class from all cards except the clicked one
+      $(".q-card").not(this).removeClass("expanded");
+      $(this).toggleClass("expanded"); // Toggle the "expanded" class on card click
+    });
+  });
+  $(document).ready(function() {
+    $(".stu-card").click(function() {
+      // Remove the "expanded" class from all cards except the clicked one
+      $(".stu-card").not(this).removeClass("expanded");
+      $(this).toggleClass("expanded"); // Toggle the "expanded" class on card click
+    });
+  });
+  $(document).ready(function() {
+    $(".whoisit").click(function() {
+      // Remove the "expanded" class from all cards except the clicked one
+      $(".whoisit").not(this).removeClass("expanded");
+      $(this).toggleClass("expanded"); // Toggle the "expanded" class on card click
+    });
+  });
+  const changePersonButton = document.getElementById('personal');
+  const changeMerchButton = document.getElementById('merchant');
+  const contentElement = document.getElementById('content');
+
+  changeMerchButton.addEventListener('click', function () {
+    contentElement.innerHTML =`<h4 class="m-3 my-5">Байгууллагатай холбоотой асуултууд:</h4><div class="card mb-2"><div class="p-3" id="faqTen"><h4 class="mb-0"><a href="#!" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen"><i class="fa fa-plus-circle me-1 "></i>Хэрхэн танайхтай хамтран ажиллах вэ?</a></h4></div><div id="collapseTen" class="collapse" aria-labelledby="faqTem" data-bs-parent="#Faqaccordionsten"><div class="card-body border-top">Бид хамтран ажиллах саналыг веб сайт болон имэйлээр хүлээн авдаг бөгөөд та бүтээгдэхүүн үйлчилгээний дэлгэрэнгүй танилцуулгаа info@numur.mn хаягт илгээнэ үү. Хэрвээ веб сайтаар хамран ажиллах саналаа илгээх бол <a class="fw-semibold" href="{% url 'leasing_line'%}" target="_blank"><i>энд дарж</i></a> илгээнэ үү. Бид тантай эргэн холбогдож хамтран ажиллах санал, боломжуудын талаар танилцуулах болно.</div></div></div><div class="card mb-2"><div class="p-3" id="faqEleven"><h4 class="mb-0"><a href="#!" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven"><i class="fa fa-plus-circle me-1 "></i>Numur app-г ашиглан хэрхэн борлуулалт хийдэг вэ?</a></h4></div><div id="collapseEleven" class="collapse" aria-labelledby="faqEleven" data-bs-parent="#Faqaccordionseleven"><div class="card-body border-top">Манайх салбар мерчантууддаа зориулсан аппликешнтэй бөгөөд тэрхүү аппг ашиглан борлуулалтаа хийх боломжтой.</div></div></div><div class="card mb-2"><div class="p-3" id="faqTwo"><h4 class="mb-0"><a href="#!" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="fa fa-plus-circle me-1 "></i>Зээлийн хүү хэд вэ?</a></h4></div><div id="collapseTwo" class="collapse" aria-labelledby="faqTwo" data-bs-parent="#Faqaccordionsone"><div class="card-body border-top">🔸1 сар - 4,9%<br>🔸3 сар - 5,4%<br>🔸6 сар - 5,9%<br>🔸9 сар - 6,4%</div></div></div>`;
+  });
+  changePersonButton.addEventListener('click', function () {
+  contentElement.innerHTML = `<h4 class="m-3 my-5">Хэрэглэгчтэй холбоотой асуултууд:</h4><div class="card mb-2"><div class="p-3" id="faqOne"><h4 class="mb-0"><a href="#!" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> <i class="fa fa-plus-circle me-1 "></i>Зээлийн эрх хэзээ нэмэгдэж ордог вэ?</a></h4></div><div id="collapseOne" class="collapse show" aria-labelledby="faqOne" data-bs-parent="#Faqaccordionsone"> <div class="card-body border-top">Дараах тохиолдолд зээлийн эрх нэмэгдэнэ: Та нийт 3 ширхэг од цуглуулах хэрэгтэй бөгөөд манай программ ашигласан зээлийн хэмжээнээс хамааран автоматаар тооцоолох болно. Уг одыг хэрхэн авах вэ? : <br>🔸Хуваарьт төлөлтөө хугацаанд нь хийсэн тохиолдолд <br>🔸Зээлээ хаасан тохиолдолд / 15 ба түүнээс дээш хоног ашигласан байх/ <br>🔸Нэг зээл төлөлтөөс дараагын зээл төлөлт, нэг зээл хаалтаас дараагын зээл хаалтын хооронд хамгийн багадаа 15 ба түүнээс дээш хоног байх хэрэгтэй .Та 3 од цуглуулсан тохиолдолд эрх нэмэх цэсэн дээр дарсанаар таны зээлийн эрх нэмэгдэнэ. Зээлийн хэмжээ хамгийн багадаа 50000 төгрөгөөр нэмэгдэнэ. </div></div></div><div class="card mb-2"><div class="p-3" id="faqTwo"><h4 class="mb-0"><a href="#!" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="fa fa-plus-circle me-1 "></i>Зээлийн хүү хэд вэ?</a></h4></div><div id="collapseTwo" class="collapse" aria-labelledby="faqTwo" data-bs-parent="#Faqaccordionsone"><div class="card-body border-top">🔸1 сар - 4,9%<br>🔸3 сар - 5,4%<br>🔸6 сар - 5,9%<br>🔸9 сар - 6,4%</div></div></div><div class="card mb-2"><div class="p-3" id="faqThree"><h4 class="mb-0"><a href="#!" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="fa fa-plus-circle me-1 "></i>Зээлийн хугацаа хэтэрсэн байгаа зээлээ хаагаад эргээд зээл авч болох уу?</a></h4></div><div id="collapseThree" class="collapse" aria-labelledby="faqThree" data-bs-parent="#Faqaccordionsone"><div class="card-body border-top">Та хугацаа хэтрүүлсэн байгаа учраас хэтэрсэн хоногоос шалтгаалан зээл авах боломжтой үгүйг программ тооцоолдог байгаа , та Нөмөр facebook чат, <span class="bold">contact@numurcredit.mn</span> гэсэн емайл хаягаар эрх нээлгэх хүсэлт илгээн бид хүсэлт илгээнэ, бид таны эрх нээх боломжтой үгүйг шалган эргэн хариу мэдэгдэх болно.</div></div></div>`;
+  });
+</script>
 </body>
 </html>
